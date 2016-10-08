@@ -1,0 +1,220 @@
+background.Apps {
+    transition: background 1s,margin .5s;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+background.Apps > header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    color: #ffffff;
+    font: 10px "Segoe UI Light";
+}
+
+background.Apps > header > p {
+    position: absolute;
+    font-size: 45px;
+    margin: 50px 0 0 100px;
+}
+
+background.Apps > header > section.AppsSearchHeaderSection {
+    float: right;
+    margin: 69px 50px 0 0;
+}
+
+background.Apps > header > section.AppsSearchHeaderSection input {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    height: 25px;
+    width: 200px;
+    font: 16px "Segoe UI Light";
+    padding: 3px 30px 3px 5px;
+    color: #ffffff;
+    transition: color .1s,background .1s;
+    cursor: text;
+}
+
+background.Apps > header > section.AppsSearchHeaderSection input:focus {
+    background: rgba(255,255,255,1);
+    color: #000000;
+}
+
+background.Apps > header > section.AppsSearchHeaderSection img {
+    position: absolute;
+    height: 15px;
+    margin: -23px 0 0 213px;
+}
+
+background.Apps main {
+    position: absolute;
+    left: 100px;
+    top: 150px;
+    width: 100%;
+    height: 88px;
+    transition: left .5s;
+}
+
+background.Apps main .SElement {
+    position: absolute;
+    width: 253px;
+    height: 47px;
+    opacity: 1;
+    transition: top .5s,left .5s,-webkit-transform .5s,-moz-transform .5s,-ms-transform .5s,-o-transform .5s,transform .5s,opacity .5s;
+    overflow: hidden;
+}
+
+background.Apps main .SElement[disable] {
+    -webkit-animation: hideSElementsection .5s linear;
+    -moz-animation: hideSElementsection .5s linear;
+    -o-animation: hideSElementsection .5s linear;
+    animation: hideSElementsection .5s linear;
+    width: 0;
+    opacity: 0;
+}
+
+background.Apps main .SElement section {
+    float: left;
+    height: 30px;
+    width: 40px;
+    text-align: center;
+    padding-top: 10px;
+    margin: 4px 6px 0 5px;
+}
+
+background.Apps main .SElement.focus {
+    -webkit-transform: scale(.95);
+    -moz-transform: scale(.95);
+    -ms-transform: scale(.95);
+    -o-transform: scale(.95);
+    transform: scale(.95);
+}
+
+background.Apps main .SElement header {
+    float: left;
+    color: #ffffff;
+    font: 15px "Segoe UI Light";
+    text-transform: capitalize;
+    margin-top: 13px;
+}
+
+background.Apps main .SElement:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+background.Apps main .SElement img {
+    height: 20px;
+}
+
+background.Apps main .SElement article.tick {
+    position: absolute;
+    height: 47px;
+    width: 253px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+background.Apps main .SElement article.tick > article {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    transform: rotate(45deg);
+    background: rgba(255,255,255,0);
+    margin: -25px 0 0 228px;
+}
+
+background.Apps main .SElement article.tick article.rigthTick {
+    height: 12px;
+    width: 3px;
+    background: #ffffff;
+    position: absolute;
+    margin: 33px 0 0 27px;
+    transform: rotate(-5deg);
+}
+
+background.Apps main .SElement article.tick article.leftTick {
+    height: 3px;
+    width: 6px;
+    background: #ffffff;
+    margin: 42px 0 0 23px;
+    transform: rotate(-5deg);
+}
+
+background.Apps .SElement[color="blue1"] section {
+    background: -webkit-linear-gradient(left,#00aff0,#00c2f2);
+    background: -o-linear-gradient(right,#00aff0,#00c2f2);
+    background: -moz-linear-gradient(right,#00aff0,#00c2f2);
+    background: linear-gradient(to right,#00aff0,#00c2f2);
+}
+
+background.Apps .SElement[color="blue2"] section {
+    background: -webkit-linear-gradient(left,#0072c6,#008dd3);
+    background: -o-linear-gradient(right,#0072c6,#008dd3);
+    background: -moz-linear-gradient(right,#0072c6,#008dd3);
+    background: linear-gradient(to right,#0072c6,#008dd3);
+}
+
+background.Apps .SElement[color="blue3"] section {
+    background: -webkit-linear-gradient(left,#094ab2,#0a5bc4);
+    background: -o-linear-gradient(right,#094ab2,#0a5bc4);
+    background: -moz-linear-gradient(right,#094ab2,#0a5bc4);
+    background: linear-gradient(to right,#094ab2,#0a5bc4);
+}
+
+background.Apps .SElement[color="blue4"] section {
+    background: -webkit-linear-gradient(left,#008299,#009fb1);
+    background: -o-linear-gradient(right,#008299,#009fb1);
+    background: -moz-linear-gradient(right,#008299,#009fb1);
+    background: linear-gradient(to right,#008299,#009fb1);
+}
+
+background.Apps .SElement[color="red1"] section {
+    background: -webkit-linear-gradient(left,#ac193d,#be1e4a);
+    background: -o-linear-gradient(right,#ac193d,#be1e4a);
+    background: -moz-linear-gradient(right,#ac193d,#be1e4a);
+    background: linear-gradient(to right,#ac193d,#be1e4a);
+}
+
+background.Apps .SElement[color="red2"] section {
+    background: -webkit-linear-gradient(left,#7b0000,#980000);
+    background: -o-linear-gradient(right,#7b0000,#980000);
+    background: -moz-linear-gradient(right,#7b0000,#980000);
+    background: linear-gradient(to right,#7b0000,#980000);
+}
+
+background.Apps .SElement[color="orange"] section {
+    background: -webkit-linear-gradient(left,#d24726,#dc572e);
+    background: -o-linear-gradient(right,#d24726,#dc572e);
+    background: -moz-linear-gradient(right,#d24726,#dc572e);
+    background: linear-gradient(to right,#d24726,#dc572e);
+}
+
+background.Apps .SElement[color="voilet"] section {
+    background: -webkit-linear-gradient(left,#5133ab,#643ebf);
+    background: -o-linear-gradient(right,#5133ab,#643ebf);
+    background: -moz-linear-gradient(right,#5133ab,#643ebf);
+    background: linear-gradient(to right,#5133ab,#643ebf);
+}
+
+background.Apps .SElement[color="green"] section {
+    background: -webkit-linear-gradient(left,#008a00,#00a600);
+    background: -o-linear-gradient(right,#008a00,#00a600);
+    background: -moz-linear-gradient(right,#008a00,#00a600);
+    background: linear-gradient(to right,#008a00,#00a600);
+}
+
+background.Apps .SElement[color="purple"] section {
+    background: -webkit-linear-gradient(left,#95008d,#ac00a5);
+    background: -o-linear-gradient(right,#95008d,#ac00a5);
+    background: -moz-linear-gradient(right,#95008d,#ac00a5);
+    background: linear-gradient(to right,#95008d,#ac00a5);
+}
+
+background.Apps .SElement[color="black"] section {
+    background: -webkit-linear-gradient(left,#595959,#6e6e6e);
+    background: -o-linear-gradient(right,#595959,#6e6e6e);
+    background: -moz-linear-gradient(right,#595959,#6e6e6e);
+    background: linear-gradient(to right,#595959,#6e6e6e);
+}

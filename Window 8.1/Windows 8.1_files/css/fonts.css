@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../segoeui/segoeui.eot');
+    src: local('☺'),url('../segoeui/segoeui.woff') format('woff'), url('../segoeui/segoeui.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Light';
+    src: url('../segoeuil/segoeuil.eot');
+    src: local('☺'),url('../segoeuil/segoeuil.woff') format('woff'),url('../segoeuil/segoeuil.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Semilight';
+    src: url('../segoeuisl/segoeuisl.eot');
+    src: local('☺'),url('../segoeuisl/segoeuisl.woff') format('woff'),url('../segoeuisl/segoeuisl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI bold';
+    src: url('../segoeuib/segoeuib.eot');
+    src: local('☺'),url('../segoeuib/segoeuib.woff') format('woff'),url('../segoeuib/segoeuib.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Semibold';
+    src: url('../seguisb/seguisb.eot');
+    src: local('☺'),url('../seguisb/seguisb.woff') format('woff'),url('../seguisb/seguisb.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

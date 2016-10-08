@@ -1,0 +1,23 @@
+#lockScreen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: background 1s,top 1s;
+    top: 0;
+    z-index: 1100;
+}
+
+#lockScreen section.timeAndDateLockScreen {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    color: #ffffff;
+}
+
+#TimeLockScreen {
+    font: 100px "Segoe UI light";
+}
+
+#DateLockScreen {
+    font: 50px "Segoe UI light";
+}

@@ -1,0 +1,284 @@
+leftTopStartOppener, leftBottemStartOppener {
+    position: fixed;
+    right: 0;
+    width: 5px;
+    height: 100px;
+    background: rgba(0,0,0,0);
+    z-index: 60;
+}
+
+leftTopStartOppener {
+    top: 0;
+}
+
+leftBottemStartOppener {
+    bottom: 0;
+}
+
+leftStart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 85px;
+    background: #fff;
+    transition: right .3s,background .3s,color .3s,opacity .3s;
+    font: 15px "Segoe UI Semilight";
+    overflow: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    z-index: 101;
+}
+
+leftStart > ul {
+    width: 100%;
+}
+
+leftStart > ul li {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+leftStart > ul li header {
+    margin-top: 3px;
+}
+
+leftStart > ul li:hover {
+    background: #333333;
+}
+
+leftStart > ul img {
+    -webkit-filter: drop-shadow(3px 2px 3px #333333);
+    filter: drop-shadow(3px 2px 3px #333333);
+}
+
+.startLogoLeftStartColor {
+    -webkit-filter: none;
+    filter: none;
+}
+
+dateAndTime {
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    height: 80px;
+    padding: 30px;
+    padding-right: 60px;
+    background: rgba(17,17,17,0.8);
+    color: #ffffff;
+    font: 15px "Segoe UI light";
+    z-index: 101;
+}
+
+dateAndTime time {
+    font-size: 75px;
+    position: relative;
+    top: -13px;
+}
+
+dateAndTime day {
+    font-size: 30px;
+    position: absolute;
+}
+
+dateAndTime monthAndDate {
+    font-size: 30px;
+    position: relative;
+    top: -11px;
+}
+
+.leftmenu, .subleftmenu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 345px;
+    transition: right .5s;
+    overflow: auto;
+    color: #ffffff;
+    border-left: 1px solid rgba(0,0,0,0.7);
+    z-index: 90;
+}
+
+.leftmenu header, .subleftmenu header {
+    padding: 20px 0 10px 30px;
+    font: 30px "Segoe UI Semilight";
+}
+
+.leftmenu p, .subleftmenu p, .leftmenu form, .subleftmenu form {
+    margin: 20px 0 20px 30px;
+    font: 16px "Segoe UI Light";
+}
+
+.leftmenu p.unhover {
+    color: rgba(255,255,255,0.7);
+    margin-top: 0;
+}
+
+.leftmenu ul {
+    width: 100%;
+}
+
+.leftmenu ul li {
+    font: 15px "Segoe UI Light";
+    width: 100%;
+    padding: 12px 0 12px 30px;
+}
+
+.leftmenu ul li:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+.subleftmenu {
+    background: #ffffff;
+    color: #000000;
+    z-index: 80;
+}
+
+.subleftmenu header {
+    color: #ffffff;
+    transition: background .5s;
+}
+
+Personalize > * {
+    clear: both;
+}
+
+Personalize ul {
+    margin: 5px 0 0 30px;
+    width: 100%;
+}
+
+Personalize.subleftmenu p {
+    color: #666666;
+    font-size: 14px;
+}
+
+Personalize ul.backgroundImages li {
+    margin: 0 5px 5px 0;
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+
+Personalize ul.backgroundImages li:hover img {}
+
+Personalize ul.backgroundImages {
+    height: 215px;
+    width: 100%;
+}
+
+Personalize ul.backgroundImages img {
+    height: 50px;
+    width: 50px;
+}
+
+Personalize ul.backgroundImages li:hover img {
+    border: inset 4px #000000;
+    height: 42px;
+    width: 42px;
+}
+
+Personalize ul.backgroundColor1 li, Personalize ul.AccentColor1 li {
+    height: 45px;
+    width: 46px;
+    float: left;
+    transition: background .5s;
+}
+
+Personalize ul.backgroundColor1 li:hover, Personalize ul.AccentColor1 li:hover {
+    border: inset 2px #000000;
+    height: 41px;
+    width: 42px;
+}
+
+Personalize ul.backgroundColor1, Personalize ul.AccentColor1 {
+    height: 45px;
+    width: 100%;
+}
+
+Personalize ul.backgroundColor2 li, Personalize ul.AccentColor2 li {
+    margin-top: 2px;
+    height: 20px;
+    width: 15px;
+    float: left;
+    transition: height .3s,margin .3s;
+}
+
+Personalize ul.backgroundColor2, Personalize ul.AccentColor2 {
+    height: 30px;
+    width: 100%;
+}
+
+Share > ul > li > img {
+    height: 40px;
+    margin: 0 10px 0 0;
+}
+
+Devices > ul > li > img {
+    height: 35px;
+    margin: 0 10px 0 0;
+}
+
+#tickElementOfBackgroundImages {
+    position: absolute;
+    margin-top: -54px;
+    height: 42px;
+    width: 42px;
+}
+
+#tickElementOfBackgroundColor, #tickElementOfAccentColor {
+    position: absolute;
+    height: 45px;
+    width: 46px;
+}
+
+#tickElementOfBackgroundColor:hover, #tickElementOfAccentColor:hover {
+    position: absolute;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+
+#tickElementOfBackgroundColor .left, #tickElementOfAccentColor .left {
+    position: absolute;
+    background: #ffffff;
+    height: 3px;
+    width: 8px;
+    margin: 10px 0 0 29px;
+    transform: rotate(40deg);
+}
+
+#tickElementOfBackgroundColor .right, #tickElementOfAccentColor .right {
+    position: absolute;
+    background: #ffffff;
+    height: 14px;
+    width: 3px;
+    margin: 2px 0 0 37px;
+    transform: rotate(40deg);
+}
+
+#ActivatedWindows {
+    padding: 30px 0 0 30px;
+    font: 15px 'Segoe UI Semilight';
+    background: rgba(0,0,0,0.2);
+    color: #F00;
+    z-index: 80;
+}
+
+#ActivatedWindows section {
+    position: absolute;
+    height: 658px;
+    width: 100%;
+    margin-left: -30px;
+    background: rgba(0,0,0,0.2);
+    z-index: 80;
+}

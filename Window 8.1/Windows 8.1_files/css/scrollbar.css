@@ -1,0 +1,157 @@
+scrollbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15px;
+    background: rgba(255,255,255,0.2);
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+scrollbar:hover {
+    opacity: 1;
+}
+
+scrollbar left, scrollbar right {
+    float: left;
+    width: 30px;
+    height: 15px;
+    color: rgba(0,0,0,0.8);
+    font: 18px "Segoe UI Bold";
+    line-height: 12px;
+    text-align: center;
+    overflow: hidden;
+}
+
+scrollbar right {
+    float: right;
+}
+
+scrollbar left:hover, scrollbar right:hover {
+    background: rgba(255,255,255,0.9);
+}
+
+scrollbar scroll {
+    position: absolute;
+    height: 15px;
+}
+
+scrollbar scroller {
+    position: absolute;
+    height: 15px;
+    background: rgba(255,255,255,0.8);
+    transition: width .5s,left .5s;
+}
+
+scrollbar scroller:hover {
+    background: rgba(255,255,255,0.9);
+}
+
+toScrollLeft, toScrollRight {
+    position: absolute;
+    top: 100px;
+    width: 2px;
+    background: rgba(0,0,0,0);
+    z-index: 1000;
+}
+
+toScrollLeft {
+    left: 0;
+}
+
+toScrollRight {
+    right: 0;
+}
+
+#loading1, #loading2, #message1, #message2 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 1600;
+    background: rgb(0,171,98);
+}
+
+#loading1 {
+    transition: left 2s;
+    left: 0;
+}
+
+#loading2 {
+    transition: right 2s;
+    right: 0;
+}
+
+#loading1 section, #loading2 section, #message1 section, #message2 section, #message3 section, #message4 section, #message5 section {
+    position: absolute;
+    font: 50px "Segoe UI Light",Verdana,Arial;
+    color: #ffffff;
+}
+
+#loading1 section, #loading2 section, #message5 section {
+    top: 45%;
+}
+
+#loading1 section, #message1 section {
+    right: 0;
+}
+
+#loading2 section, #message2 section {
+    left: 0;
+}
+
+#message1, #message2, #message3, #message4 {
+    background: rgb(0,155,240);
+}
+
+#message1 {
+    transition: left ease-in 2s,transform ease-in 2s;
+    transform: rotate(-90deg);
+}
+
+#message2 {
+    transition: right ease-in 2s,transform ease-in 2s;
+    transform: rotate(-90deg);
+}
+
+#message3, #message4 {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    z-index: 1500;
+    overflow: hidden;
+}
+
+#message3 {
+    transition: top 2s,transform 2s;
+    top: 0;
+}
+
+#message4 {
+    transition: bottom 2s,transform 2s;
+    bottom: 0;
+}
+
+    #message3 section, #message4 section, #message5 section {
+        width: 100%;
+        text-align: center;
+    }
+
+#message3 section {
+    bottom: 0;
+}
+
+#message4 section {
+    top: 0;
+}
+
+#message5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(144, 37, 255);
+    transition: width 2s,height 2s,top 2s,left 2s,border-radius 1s;
+    top: 0;
+    left: 0;
+    z-index: 1300;
+    overflow: hidden;
+}

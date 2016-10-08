@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Windows 8.1</title>
+        <link href="Windows%208.1_files/css/core.css" rel="stylesheet" rev="stylesheet">
+    </head>
+    <body>
+        <background id="loading1">
+            <section>Please&nbsp;</section>
+            <section style="opacity: 0">Click</section>
+        </background>
+        <background id="loading2">
+            <section>Wait...</section>
+            <section style="opacity: 0">&nbsp;Here</section>
+        </background>
+        <background id="message1" style="left: -110%">
+            <section id="M1T">Thank You&nbsp;</section>
+        </background>
+        <background id="message2" style="right: -110%">
+            <section id="M2T">for Waiting</section>
+        </background>
+        <background id="message3">
+            <section id="M3T">Thank You for Waiting</section>
+        </background>
+        <background id="message4">
+            <section id="M4T">Thank You for Waiting</section>
+        </background>
+        <background id="logIn">
+            <header>User Details</header>
+            <article id="errorEmpty" class="error">Please enter First Name</article>
+            <article id="errorSymbol" class="error">Please enter only a-z or A-Z or 0-9</article>
+            <form id="logInForm">
+                <input name="firstName" class="textInput" placeholder="First Name" type="text" />
+                <input name="lastName" class="textInput" placeholder="Last Name" type="text" />
+                <img name="submit" class="submit" src="Windows%208.1_files/images/start/icon/back.png" />
+            </form>
+        </background>
+        <background id="message5">
+            <section>Enjoy</section>
+        </background>
+        <background id="lockScreen">
+            <section class="timeAndDateLockScreen">
+                <article id="TimeLockScreen"></article>
+                <article id="DateLockScreen"></article>
+            </section>
+        </background>
+        <background class="Start" id="StartBackground">
+            <header id="StartBackgroundHeader">
+                <p>Start</p>
+                <user>
+                    <section id="SectionOfUserNameStart" style="width: auto;height: auto;padding: 5px;">
+                        <username id="UserNameOfCurrentUser"></username>
+                        <img id="UserImage" src="Windows%208.1_files/images/start/icon/user_image.png">
+                    </section>
+                    <section title="Restart" class="shutdown" onclick="location.reload();">
+                        <img src="Windows%208.1_files/images/start/icon/restart.png">
+                    </section>
+                    <section title="Search" class="search" onclick="document.body.click(); setTimeout(function () { document.getElementsByClassName('searchLeftStart')[0].click() }, 100);">
+                        <img src="Windows%208.1_files/images/start/icon/search.png">
+                    </section>
+                </user>
+            </header>
+            <main id="StartBackgroundMain"></main>
+            <article id="divForNewSection"></article>
+            <img class="Arrow" src="Windows%208.1_files/images/start/icon/down.png" onclick="document.getElementById('AllSElements').style.marginTop = null;document.getElementById('StartBackground').style.marginTop =  '-' + document.getElementById('StartBackground').clientHeight + 'px';WindowLevel = 1">
+            <bottomMenu id="StartBackgroundBottomMenu">
+                <ul class="left">
+                    <li id="StartBackgroundBottomMenuUnpin"><img src="Windows%208.1_files/images/start/icon/unpin.png"><br>Unpin</li>
+                    <li id="StartBackgroundBottomMenuResize">
+                        <img src="Windows%208.1_files/images/start/icon/resize.png"><br>Resize
+                        <section disable>
+                            <ul>
+                                <li name="large">Large</li>
+                                <li name="wide">Wide</li>
+                                <li name="medium">Medium</li>
+                                <li name="small">Small</li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li id="StartBackgroundBottomMenuChangeColor">
+                        <img src="Windows%208.1_files/images/start/icon/change_color.png"><br>Change Color
+                        <section disable>
+                            <ul>
+                                <li name="red2" style="background: linear-gradient(to right, #7b0000, #980000);"></li>
+                                <li name="red1" style="background: linear-gradient(to right, #ac193d, #be1e4a);"></li>
+                                <li name="purple" style="background: linear-gradient(to right, #95008d, #ac00a5);"></li>
+                                <li name="voilet" style="background: linear-gradient(to right, #5133ab, #643ebf);"></li>
+                                <li name="blue4" style="background: linear-gradient(to right, #008299, #009fb1);"></li>
+                                <li name="blue3" style="background: linear-gradient(to right, #094ab2, #0a5bc4);"></li>
+                                <li name="blue2" style="background: linear-gradient(to right, #0072c6 , #008dd3);"></li>
+                                <li name="blue1" style="background: linear-gradient(to right, #00aff0, #00c2f2);"></li>
+                                <li name="green" style="background: linear-gradient(to right, #008a00, #00a600);"></li>
+                                <li name="orange" style="background: linear-gradient(to right, #d24726, #dc572e);"></li>
+                                <li name="black" style="background: linear-gradient(to right, #595959, #6e6e6e);"></li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li id="StartBackgroundBottomMenuClearSelection"><img src="Windows%208.1_files/images/start/icon/clear_selection.png"><br>Clear Selection</li>
+                </ul>
+                <ul class="right">
+                    <li id="StartBackgroundBottomMenuCustomise"><img src="Windows%208.1_files/images/start/icon/customise.png"><br>Customise</li>
+                </ul>
+            </bottomMenu>
+            <scrollbar id="StartScrollbar">
+                <left>&nbsp;&nbsp;&lt;</left>
+                <scroll>
+                    <scroller id="StartBackgroundScroller"></scroller>
+                </scroll>
+                <right>&gt;&nbsp;&nbsp;</right>
+            </scrollbar>
+            <toScrollLeft id="StartToScrollLeft"></toScrollLeft>
+            <toScrollRight id="StartToScrollRight"></toScrollRight>
+        </background>
+        <background id="AllSElements" class="Apps">
+            <header id="AllSElementsHeader">
+                <p>Apps</p>
+                <section class="AppsSearchHeaderSection">
+                    <input id="AppsSearchHeaderSectionInput" name="q" title="Search" type="text">
+                    <img src="Windows%208.1_files/images/start/icon/search.png">
+                </section>
+            </header>
+            <main id="AllSElementsMain">
+                <section name="3D builder" color="blue4"></section>
+                <section name="alarm" color="red1"></section>
+                <section name="app connector" color="orange"></section>
+                <section name="calculator" color="green"></section>
+                <section name="calendar" color="voilet"></section>
+                <section name="camera" color="purple"></section>
+                <section name="desktop" color="voilet"></section>
+                <section name="finance" color="green"></section>
+                <section name="food and drink" color="blue4"></section>
+                <section name="games" color="green"></section>
+                <section name="getting started" color="blue2"></section>
+                <section name="health and fitness" color="orange"></section>
+                <section name="help and tips" color="orange"></section>
+                <section name="internet explorer" color="blue1"></section>
+                <section name="mail" color="blue2"></section>
+                <section name="maps" color="purple"></section>
+                <section name="microsoft edge" color="blue3"></section>
+                <section name="microsoft solitaire" color="red1"></section>
+                <section name="music" color="orange"></section>
+                <section name="news" color="red1"></section>
+                <section name="office hub" color="orange"></section>
+                <section name="one note" color="voilet"></section>
+                <section name="people" color="orange"></section>
+                <section name="photo" color="blue4"></section>
+                <section name="reader" color="orange"></section>
+                <section name="reading list" color="red2"></section>
+                <section name="scan" color="blue3"></section>
+                <section name="sky drive" color="blue3"></section>
+                <section name="skype" color="blue1"></section>
+                <section name="sound recorder" color="orange"></section>
+                <section name="sports" color="voilet"></section>
+                <section name="store" color="green"></section>
+                <section name="travel" color="blue4"></section>
+                <section name="video" color="red1"></section>
+                <section name="weather" color="blue2"></section>
+                <section name="windows phone" color="blue2"></section>
+                <section name="xbox" color="green"></section>
+            </main>
+            <img class="Arrow" src="Windows%208.1_files/images/start/icon/up.png" onclick="document.getElementById('AppsSearchHeaderSectionInput').value = '';AppsSearchHeaderSectionChange();document.getElementById('AllSElements').style.marginTop = document.getElementById('AllSElements').clientHeight + 'px';document.getElementById('StartBackground').style.marginTop = null;WindowLevel = 0">
+            <bottomMenu id="AllSElementsBottomMenu">
+                <ul class="left">
+                    <li id="AllSElementsBottomMenuPin"><img src="Windows%208.1_files/images/start/icon/pin.png"><br>Pin</li>
+                    <li id="AllSElementsBottomMenuUnpin"><img src="Windows%208.1_files/images/start/icon/unpin.png"><br>Unpin</li>
+                    <li id="AllSElementsBottomMenuChangeColor">
+                        <img src="Windows%208.1_files/images/start/icon/change_color.png"><br>Change Color
+                        <section disable>
+                            <ul>
+                                <li name="red2" style="background: linear-gradient(to right, #7b0000, #980000);"></li>
+                                <li name="red1" style="background: linear-gradient(to right, #ac193d, #be1e4a);"></li>
+                                <li name="purple" style="background: linear-gradient(to right, #95008d, #ac00a5);"></li>
+                                <li name="voilet" style="background: linear-gradient(to right, #5133ab, #643ebf);"></li>
+                                <li name="blue4" style="background: linear-gradient(to right, #008299, #009fb1);"></li>
+                                <li name="blue3" style="background: linear-gradient(to right, #094ab2, #0a5bc4);"></li>
+                                <li name="blue2" style="background: linear-gradient(to right, #0072c6 , #008dd3);"></li>
+                                <li name="blue1" style="background: linear-gradient(to right, #00aff0, #00c2f2);"></li>
+                                <li name="green" style="background: linear-gradient(to right, #008a00, #00a600);"></li>
+                                <li name="orange" style="background: linear-gradient(to right, #d24726, #dc572e);"></li>
+                                <li name="black" style="background: linear-gradient(to right, #595959, #6e6e6e);"></li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li id="AllSElementsBottomMenuClearSelection"><img src="Windows%208.1_files/images/start/icon/clear_selection.png"><br>Clear Selection</li>
+                </ul>
+                <ul class="right">
+                    <li id="AllSElementsBottomMenuCustomise"><img src="Windows%208.1_files/images/start/icon/customise.png"><br>Customise</li>
+                </ul>
+            </bottomMenu>
+            <scrollbar id="AllSElementsScrollbar">
+                <left>&nbsp;&nbsp;&lt;</left>
+                <scroll>
+                    <scroller id="AllSElementsScroller"></scroller>
+                </scroll>
+                <right>&gt;&nbsp;&nbsp;</right>
+            </scrollbar>
+            <toScrollLeft id="AllSElementsToScrollLeft"></toScrollLeft>
+            <toScrollRight id="AllSElementsToScrollRight"></toScrollRight>
+        </background>
+        <bottomleftStartOppener></bottomleftStartOppener>
+        <bottomleftStart onclick="document.getElementById('AllSElements').style.marginTop = document.getElementById('AllSElements').clientHeight + 'px';document.getElementById('StartBackground').style.marginTop = null;WindowLevel = 0">
+            <img src="Windows%208.1_files/images/start/icon/start4.png">
+        </bottomleftStart>
+
+        <leftTopStartOppener></leftTopStartOppener>
+        <leftBottemStartOppener></leftBottemStartOppener>
+        <leftStart>
+            <ul>
+                <li class="searchLeftStart">
+                    <img src="Windows%208.1_files/images/start/icon/search.png" style="height: 40px;">
+                    <header>Search</header>
+                </li>
+                <li class="shareLeftStart">
+                    <img src="Windows%208.1_files/images/start/icon/share.png">
+                    <header>Share</header>
+                </li>
+                <li class="startLeftStart" onclick="document.getElementById('AppsSearchHeaderSectionInput').value = '';AppsSearchHeaderSectionChange();document.getElementById('AllSElements').style.marginTop = document.getElementById('AllSElements').clientHeight + 'px';document.getElementById('StartBackground').style.marginTop = null;WindowLevel = 0">
+                    <img class="startLogoLeftStart" src="Windows%208.1_files/images/start/icon/start1.png" style="height: 40px;">
+                    <img class="startLogoLeftStart startLogoLeftStartColor" src="Windows%208.1_files/images/start/icon/start2.png" style="display: none;height: 40px;">
+                    <img class="startLogoLeftStart startLogoLeftStartColor" src="Windows%208.1_files/images/start/icon/start3.png" style="display: none;height: 40px;">
+                    <header>Start</header>
+                </li>
+                <li class="devicesLeftStart">
+                    <img src="Windows%208.1_files/images/start/icon/devices.png">
+                    <header>Devices</header>
+                </li>
+                <li class="settingsLeftStart">
+                    <img src="Windows%208.1_files/images/start/icon/setting.png" style="height: 40px;">
+                    <header>Settings</header>
+                </li>
+            </ul>
+        </leftStart>
+        <dateAndTime>
+            <time>
+                <hour id="hourDateAndTime"></hour>
+                :
+                <min id="minDateAndTime"></min>
+            </time>
+            <day id="dayDateAndTime"></day>
+            <monthAndDate id="monthAndDateDateAndTime"></monthAndDate>
+        </dateAndTime>
+
+        <Search class="leftmenu">
+            <header>Search</header>
+            <p class="unhover">Start</p>
+            <p>
+                <input id="leftmenuSearchTop" title="Everywhere" type="text" class="textInput">
+                <img class="textInputImg" src="Windows%208.1_files/images/start/icon/search.png" onclick="searchSubmit()">
+            </p>
+        </Search>
+        <Share class="leftmenu">
+            <header>Share</header>
+            <p class="unhover">Start</p>
+            <ul>
+                <li><img src="Windows%208.1_files/images/google_plus.png" align="center"> Google Plus</li>
+                <li><img src="Windows%208.1_files/images/facebook.png" align="center"> Facebook</li>
+                <li><img src="Windows%208.1_files/images/twitter.png" align="center"> Twitter</li>
+                <li><img src="Windows%208.1_files/images/download.png" align="center"> Download</li>
+            </ul>
+        </Share>
+        <Devices class="leftmenu">
+            <header>Devices</header>
+            <p class="unhover">Start</p>
+            <ul>
+                <li><img src="Windows%208.1_files/images/google_drive.png" align="center"> Google Drive</li>
+                <li><img src="Windows%208.1_files/images/one_drive.png" align="center"> One Drive</li>
+            </ul>
+        </Devices>
+        <Settings class="leftmenu">
+            <header>Settings</header>
+            <p class="unhover">Start</p>
+            <ul>
+                <li class="PersonalizeLeftStart">Personalize</li>
+                <li class="HelpLeftStart">Help</li>
+                <li class="CreditsLeftStart">Credits</li>
+            </ul>
+        </Settings>
+        <Personalize class="subleftmenu">
+            <header><img align="bottom" src="Windows%208.1_files/images/start/icon/back.png" onclick="document.body.click();document.getElementsByClassName('settingsLeftStart')[0].click()">&ensp;Personalize</header>
+            <section id="ActivatedWindows">Please Activate The Windows First.<br>For help goto help in Settings.<section></section></section>
+            <ul class="backgroundImages" id="PersonalizebackgroundImages" style="margin-top: 30px;">
+                <li number="1"><img src="Windows%208.1_files/images/start_screen/icon/1.png"></li>
+                <li number="2"><img src="Windows%208.1_files/images/start_screen/icon/2.png"></li>
+                <li number="3"><img src="Windows%208.1_files/images/start_screen/icon/3.png"></li>
+                <li number="4"><img src="Windows%208.1_files/images/start_screen/icon/4.png"></li>
+                <li number="5"><img src="Windows%208.1_files/images/start_screen/icon/5.png"></li>
+                <li number="6" style="clear: both;"><img src="Windows%208.1_files/images/start_screen/icon/6.png"></li>
+                <li number="7"><img src="Windows%208.1_files/images/start_screen/icon/7.png"></li>
+                <li number="8"><img src="Windows%208.1_files/images/start_screen/icon/8.png"></li>
+                <li number="9"><img src="Windows%208.1_files/images/start_screen/icon/9.png"></li>
+                <li number="10"><img src="Windows%208.1_files/images/start_screen/icon/10.png"></li>
+                <li number="11" style="clear: both;"><img src="Windows%208.1_files/images/start_screen/icon/11.png"></li>
+                <li number="12"><img src="Windows%208.1_files/images/start_screen/icon/12.png"></li>
+                <li number="13"><img src="Windows%208.1_files/images/start_screen/icon/13.png"></li>
+                <li number="14"><img src="Windows%208.1_files/images/start_screen/icon/14.png"></li>
+                <li number="15"><img src="Windows%208.1_files/images/start_screen/icon/15.png"></li>
+                <li number="16" style="clear: both;"><img src="Windows%208.1_files/images/start_screen/icon/16.png"></li>
+                <li number="17"><img src="Windows%208.1_files/images/start_screen/icon/17.png"></li>
+                <li number="18"><img src="Windows%208.1_files/images/start_screen/icon/18.png"></li>
+                <li number="19" style="background: #180053;"><img src="" style="background: #180053;margin-bottom: 4px;"></li>
+                <li number="20"><img id="minStartBackground" src="Windows%208.1_files/images/wallpapers/0.jpg"></li>
+            </ul>
+
+            <p style="margin-top: 30px;margin-bottom: 0;">Background Color</p>
+            <ul class="backgroundColor1" id="PersonalizebackgroundColor1">
+                <li style="clear: both;"></li><li></li><li></li><li></li><li></li><li></li>
+                <li style="clear: both;"></li><li></li><li></li><li></li><li></li><li></li>
+                <li style="clear: both;"></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul class="backgroundColor2" id="PersonalizebackgroundColor2">
+                <li number="0" style="background: #303030;"></li>
+                <li number="1" style="background: #777777;"></li>
+                <li number="2" style="background: #da0025;"></li>
+                <li number="3" style="background: #f01800;"></li>
+                <li number="4" style="background: #ff4300;"></li>
+                <li number="5" style="background: #fd6c05;"></li>
+                <li number="6" style="background: #feab07;"></li>
+                <li number="7" style="background: #ffc91e;"></li>
+                <li number="8" style="background: #93c900;"></li>
+                <li number="9" style="background: #54c300;"></li>
+                <li number="10" style="background: #00ab62;"></li>
+                <li number="11" style="background: #00c3c4;"></li>
+                <li number="12" style="background: #009bf0;"></li>
+                <li number="13" style="background: #006afe;"></li>
+                <li number="14" style="background: #3f00dd;"></li>
+                <li number="15" style="background: #9025ff;"></li>
+                <li number="16" style="background: #ff3ec2;"></li>
+                <li number="17" style="background: #fe0b6b;"></li>
+            </ul>
+
+            <p style="margin-top: 30px;margin-bottom: 0;width: 100%;">Accent Color</p>
+            <ul class="AccentColor1" id="PersonalizeAccentColor1">
+                <li style="clear: both;"></li><li></li><li></li><li></li><li></li><li></li>
+                <li style="clear: both;"></li><li></li><li></li><li></li><li></li><li></li>
+            </ul>
+            <ul class="AccentColor2" id="PersonalizeAccentColor2" style="margin-bottom: 20px;">
+                <li number="0" style="background: #303030;"></li>
+                <li number="1" style="background: #777777;"></li>
+                <li number="2" style="background: #da0025;"></li>
+                <li number="3" style="background: #f01800;"></li>
+                <li number="4" style="background: #ff4300;"></li>
+                <li number="5" style="background: #fd6c05;"></li>
+                <li number="6" style="background: #feab07;"></li>
+                <li number="7" style="background: #ffc91e;"></li>
+                <li number="8" style="background: #93c900;"></li>
+                <li number="9" style="background: #54c300;"></li>
+                <li number="10" style="background: #00ab62;"></li>
+                <li number="11" style="background: #00c3c4;"></li>
+                <li number="12" style="background: #009bf0;"></li>
+                <li number="13" style="background: #006afe;"></li>
+                <li number="14" style="background: #3f00dd;"></li>
+                <li number="15" style="background: #9025ff;"></li>
+                <li number="16" style="background: #ff3ec2;"></li>
+                <li number="17" style="background: #fe0b6b;"></li>
+            </ul>
+        </Personalize>
+        <Help class="subleftmenu">
+            <header><img align="bottom" src="Windows%208.1_files/images/start/icon/back.png" onclick="document.body.click();document.getElementsByClassName('settingsLeftStart')[0].click()">&ensp;Help</header>
+            <p style="color: #666666;font-size: 14px;">
+                To activate Windows:-
+                <br><br>Please Enter Activation code.
+                <br><br>Which is/was know by you for almost forever.
+                <br><br>Enjoy!!!
+                <br><br>
+                <br><br>
+                <br><br>By Clicking on user name you can lock window.
+            </p>
+        </Help>
+        <Credits class="subleftmenu">
+            <header><img align="bottom" src="Windows%208.1_files/images/start/icon/back.png" onclick="document.body.click();document.getElementsByClassName('settingsLeftStart')[0].click()">&ensp;Credits</header>
+            <p style="color: #666666;font-size: 14px;">
+                <br>Vivswan Shah
+                <br>Email Address:- shahvivswan@gmail.com
+            </p>
+        </Credits>
+    </body>
+</html>
+<!---Script: Parallel-->
+<script src="Windows%208.1_files/js/parallel/external/event.js"></script>
+<script src="Windows%208.1_files/js/parallel/external/setTimeout_setInterval.js"></script>
+
+<script src="Windows%208.1_files/js/parallel/core.js"></script>
+
+<script src="Windows%208.1_files/js/parallel/parallel/compare.js"></script>
+<script src="Windows%208.1_files/js/parallel/parallel/find.js"></script>
+
+<script src="Windows%208.1_files/js/parallel/prototype/attribute.js"></script>
+<script src="Windows%208.1_files/js/parallel/prototype/class.js"></script>
+<script src="Windows%208.1_files/js/parallel/prototype/css.js"></script>
+<script src="Windows%208.1_files/js/parallel/prototype/event.js"></script>
+<script src="Windows%208.1_files/js/parallel/prototype/html_manipulation.js"></script>
+<script src="Windows%208.1_files/js/parallel/prototype/element_manipulation.js"></script>
+
+<!---Script: Windows 8.1-->
+<script src="Windows%208.1_files/js/global.js"></script>
+<script src="Windows%208.1_files/js/keydown.js"></script>
+<script src="Windows%208.1_files/js/start_button.js"></script>
+<script src="Windows%208.1_files/js/menu_bottom.js"></script>
+<script src="Windows%208.1_files/js/menu_left.js"></script>
+<script src="Windows%208.1_files/js/scrollbar.js"></script>
+<script src="Windows%208.1_files/js/screen_app.js"></script>
+<script src="Windows%208.1_files/js/screen_start.js"></script>
+<script src="Windows%208.1_files/js/screen_lock.js"></script>
+<script src="Windows%208.1_files/js/login.js"></script>
+<script src="Windows%208.1_files/js/core.js"></script>

@@ -1,0 +1,384 @@
+background.Start {
+    transition: background 1s,margin .5s;
+    background-size: cover;
+}
+
+#StartBackgroundMain {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 0;
+    transition: left .5s;
+}
+
+background.Start header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    color: #ffffff;
+    font: 10px "Segoe UI Light";
+}
+
+background.Start header > p {
+    position: absolute;
+    font-size: 45px;
+    margin: 50px 0 0 100px;
+}
+
+background.Start header > user {
+    float: right;
+    margin: 60px 50px 0 0;
+}
+
+background.Start header > user username {
+    font-size: 25px;
+    float: left;
+    text-align: right;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+background.Start header > user > section {
+    height: 40px;
+    width: 60px;
+    text-align: center;
+    padding-top: 20px;
+    float: left;
+    transition: transform .5s;
+}
+
+background.Start header > user section img {
+    height: 20px;
+}
+
+#UserImage {
+    height: 40px;
+    width: 40px;
+}
+
+.Arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+}
+
+background.Start .SElement {
+    position: absolute;
+    border: solid rgba(255,255,255,.2) 1px;
+    transition: height .5s,width .5s,opacity .5s,transform .25s,top ease-out .25s,left ease-out .25s;
+    z-index: 10;
+    text-align: center;
+}
+
+background.Start .SElement * {
+    transition: transform .25s;
+}
+
+#StartBackgroundMain .SElement.top, #StartBackgroundMain .SElement.left, #StartBackgroundMain .SElement.right, #StartBackgroundMain .SElement.bottom, #StartBackgroundMain .SElement.center {
+    border: none;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+background.Start .SElement.top * {
+    transform: rotateX(5deg);
+}
+
+background.Start .SElement.left * {
+    transform: rotateY(-5deg);
+}
+
+background.Start .SElement.right * {
+    transform: rotateY(5deg);
+}
+
+background.Start .SElement.bottom * {
+    transform: rotateX(-5deg);
+}
+
+background.Start .SElement.center {
+    transform: scale(.95);
+}
+
+background.Start .SElement[perspec="top"] {
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    perspective: 1200px;
+    -webkit-perspective-origin: bottom;
+    -moz-perspective-origin: bottom;
+    perspective-origin: bottom;
+}
+
+background.Start .SElement[perspec="left"] {
+    -webkit-perspective: 200px;
+    -moz-perspective: 200px;
+    perspective: 200px;
+    -webkit-perspective-origin: right;
+    -moz-perspective-origin: right;
+    perspective-origin: right;
+}
+
+background.Start .SElement[perspec="right"] {
+    -webkit-perspective: 200px;
+    -moz-perspective: 200px;
+    perspective: 200px;
+    -webkit-perspective-origin: left;
+    -moz-perspective-origin: left;
+    perspective-origin: left;
+}
+
+background.Start .SElement[perspec="bottom"] {
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    perspective: 500px;
+    -webkit-perspective-origin: top;
+    -moz-perspective-origin: top;
+    perspective-origin: top;
+}
+
+#StartBackgroundMain.focus .SElement {
+    transform: scale(.98);
+}
+
+#StartBackgroundMain .SElement.focus {
+    transform: scale(1.1);
+    transition: height .5s,width .5s,opacity .5s,transform .25s,top 0,left 0;
+    opacity: .8;
+    border: none;
+    margin-top: 0;
+    margin-left: 0;
+    z-index: 10000;
+}
+
+background.Start .SElement article.color {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+background.Start .SElement[size="small"] {
+    height: 55px;
+    width: 55px;
+}
+
+background.Start .SElement[size="medium"] {
+    height: 120px;
+    width: 120px;
+}
+
+background.Start .SElement[size="wide"] {
+    height: 120px;
+    width: 250px;
+}
+
+background.Start .SElement[size="large"] {
+    height: 250px;
+    width: 250px;
+}
+
+background.Start .SElement header {
+    position: absolute;
+    width: auto;
+    height: 20px;
+    bottom: 0;
+    color: #ffffff;
+    font: 12px "Segoe UI Light";
+    margin-left: 10px;
+    transition: opacity .5s,margin .5s,transform .25s;
+    text-transform: capitalize;
+    text-align: left;
+    opacity: 1;
+    z-index: 2;
+}
+
+background.Start .SElement .helpCenterImgSElement {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+background.Start .SElement[size="small"] header {
+    opacity: 0;
+}
+
+background.Start .SElement img {
+    position: relative;
+    transition: top .5s,transform .25s;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+background.Start .SElement[size="small"] img {
+    height: 30px;
+}
+
+background.Start .SElement[size="medium"] img {
+    height: 50px;
+}
+
+background.Start .SElement[size="wide"] img {
+    height: 55px;
+}
+
+background.Start .SElement[size="large"] img {
+    height: 70px;
+}
+
+background.Start .SElement .tick {
+    position: absolute;
+    transition: height .5s,width .3s,border .5s,transform .25s;
+    z-index: 10;
+}
+
+    background.Start .SElement .tick > article {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        transform: rotate(45deg);
+        transition: background .5s,transform .25s;
+    }
+
+background.Start .SElement[size="small"] .tick {
+    height: 49px;
+    width: 49px;
+}
+
+background.Start .SElement[size="medium"] .tick {
+    height: 114px;
+    width: 114px;
+}
+
+background.Start .SElement[size="wide"] .tick {
+    height: 114px;
+    width: 244px;
+}
+
+background.Start .SElement[size="large"] .tick {
+    height: 245px;
+    width: 244px;
+}
+
+background.Start .SElement .tick > article article.tickBackground {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    margin: 27px 0 0 5px;
+    transform: rotate(-45deg);
+    transition: background .5s,transform .25s;
+}
+
+background.Start .SElement .tick > article article.rigthTick {
+    position: absolute;
+    background: #ffffff;
+    height: 11px;
+    width: 2px;
+    margin: 27px 0 0 21px;
+}
+
+background.Start .SElement .tick > article article.leftTick {
+    position: absolute;
+    background: #ffffff;
+    height: 2px;
+    width: 5px;
+    margin: 36px 0 0 17px;
+}
+
+background.Start .SElement[size="small"] .tick > article {
+    margin: -23px 0 0 31px;
+}
+
+background.Start .SElement[size="medium"] .tick > article {
+    margin: -23px 0 0 96px;
+}
+
+background.Start .SElement[size="wide"] .tick > article, background.Start .SElement[size="large"] .tick > article {
+    margin: -23px 0 0 227px;
+}
+
+background.Start .SElement[color="blue1"] article.color {
+    background: -webkit-linear-gradient(left,#00aff0,#00c2f2);
+    background: -o-linear-gradient(right,#00aff0,#00c2f2);
+    background: -moz-linear-gradient(right,#00aff0,#00c2f2);
+    background: linear-gradient(to right,#00aff0,#00c2f2);
+}
+
+background.Start .SElement[color="blue2"] article.color {
+    background: -webkit-linear-gradient(left,#0072c6,#008dd3);
+    background: -o-linear-gradient(right,#0072c6,#008dd3);
+    background: -moz-linear-gradient(right,#0072c6,#008dd3);
+    background: linear-gradient(to right,#0072c6,#008dd3);
+}
+
+background.Start .SElement[color="blue3"] article.color {
+    background: -webkit-linear-gradient(left,#094ab2,#0a5bc4);
+    background: -o-linear-gradient(right,#094ab2,#0a5bc4);
+    background: -moz-linear-gradient(right,#094ab2,#0a5bc4);
+    background: linear-gradient(to right,#094ab2,#0a5bc4);
+}
+
+background.Start .SElement[color="blue4"] article.color {
+    background: -webkit-linear-gradient(left,#008299,#009fb1);
+    background: -o-linear-gradient(right,#008299,#009fb1);
+    background: -moz-linear-gradient(right,#008299,#009fb1);
+    background: linear-gradient(to right,#008299,#009fb1);
+}
+
+background.Start .SElement[color="red1"] article.color {
+    background: -webkit-linear-gradient(left,#ac193d,#be1e4a);
+    background: -o-linear-gradient(right,#ac193d,#be1e4a);
+    background: -moz-linear-gradient(right,#ac193d,#be1e4a);
+    background: linear-gradient(to right,#ac193d,#be1e4a);
+}
+
+background.Start .SElement[color="red2"] article.color {
+    background: -webkit-linear-gradient(left,#7b0000,#980000);
+    background: -o-linear-gradient(right,#7b0000,#980000);
+    background: -moz-linear-gradient(right,#7b0000,#980000);
+    background: linear-gradient(to right,#7b0000,#980000);
+}
+
+background.Start .SElement[color="orange"] article.color {
+    background: -webkit-linear-gradient(left,#d24726,#dc572e);
+    background: -o-linear-gradient(right,#d24726,#dc572e);
+    background: -moz-linear-gradient(right,#d24726,#dc572e);
+    background: linear-gradient(to right,#d24726,#dc572e);
+}
+
+background.Start .SElement[color="voilet"] article.color {
+    background: -webkit-linear-gradient(left,#5133ab,#643ebf);
+    background: -o-linear-gradient(right,#5133ab,#643ebf);
+    background: -moz-linear-gradient(right,#5133ab,#643ebf);
+    background: linear-gradient(to right,#5133ab,#643ebf);
+}
+
+background.Start .SElement[color="green"] article.color {
+    background: -webkit-linear-gradient(left,#008a00,#00a600);
+    background: -o-linear-gradient(right,#008a00,#00a600);
+    background: -moz-linear-gradient(right,#008a00,#00a600);
+    background: linear-gradient(to right,#008a00,#00a600);
+}
+
+background.Start .SElement[color="purple"] article.color {
+    background: -webkit-linear-gradient(left,#95008d,#ac00a5);
+    background: -o-linear-gradient(right,#95008d,#ac00a5);
+    background: -moz-linear-gradient(right,#95008d,#ac00a5);
+    background: linear-gradient(to right,#95008d,#ac00a5);
+}
+
+background.Start .SElement[color="black"] article.color {
+    background: -webkit-linear-gradient(left,#595959,#6e6e6e);
+    background: -o-linear-gradient(right,#595959,#6e6e6e);
+    background: -moz-linear-gradient(right,#595959,#6e6e6e);
+    background: linear-gradient(to right,#595959,#6e6e6e);
+}
+
+background.Start #divForNewSection {
+    position: absolute;
+    top: 150px;
+    width: 30px;
+    background: rgb(255,255,255);
+    opacity: 0;
+    transition: opacity .5s;
+}
