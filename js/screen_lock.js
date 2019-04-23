@@ -4,13 +4,13 @@ var lockVisible = 0;
 
 function background_LockScreen_JS(){
     var lockScreenWallPaper = 1;
-    document.getElementById('lockScreen').style.background = 'url("Windows 8.1_files/images/lock_screen/' + lockScreenWallPaper + '.jpg") 50% 50% / cover no-repeat';
+    document.getElementById('lockScreen').style.background = 'url("images/lock_screen/' + lockScreenWallPaper + '.jpg") 50% 50% / cover no-repeat';
     lockScreenWallPaper++;
     setInterval(function (){
         if (lockScreenWallPaper > 6){
             lockScreenWallPaper = 1;
         }
-        document.getElementById('lockScreen').style.background = 'url("Windows 8.1_files/images/lock_screen/' + lockScreenWallPaper + '.jpg") 50% 50% / cover no-repeat';
+        document.getElementById('lockScreen').style.background = 'url("images/lock_screen/' + lockScreenWallPaper + '.jpg") 50% 50% / cover no-repeat';
         lockScreenWallPaper++;
     }, 5000);
     document.getElementById('lockScreen').style.top = '-' + window.innerHeight + 'px';

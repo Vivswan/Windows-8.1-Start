@@ -245,12 +245,12 @@ function leftStartJS(){
     parallel('.backgroundImages li').addEvent('click', function (){
         timerBackgroundWallpaper = 0;
         if (Number(this.getAttribute('number')) < 19){
-            document.getElementById('StartBackground').style.background = 'url("Windows 8.1_files/images/start_screen/' + this.getAttribute('number') + '.jpg") 50% 50% / cover no-repeat';
+            document.getElementById('StartBackground').style.background = 'url("images/start_screen/' + this.getAttribute('number') + '.jpg") 50% 50% / cover no-repeat';
             document.getElementById('StartBackground').style.backgroundSize = 'cover';
         } else if (Number(this.getAttribute('number')) == 19){
             document.getElementById('StartBackground').style.background = null;
         } else if (Number(this.getAttribute('number')) == 20){
-            document.getElementById('StartBackground').style.background = 'url("Windows 8.1_files/images/wallpapers/' + (indexBackgroundWallpaper == 0 ? 13 : (indexBackgroundWallpaper - 1)) + '.jpg") 50% 50% / cover no-repeat';
+            document.getElementById('StartBackground').style.background = 'url("images/wallpapers/' + (indexBackgroundWallpaper == 0 ? 13 : (indexBackgroundWallpaper - 1)) + '.jpg") 50% 50% / cover no-repeat';
             timerBackgroundWallpaper = 1;
         }
         this.appendChild(tickElementOfBackgroundImages);

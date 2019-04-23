@@ -54,7 +54,7 @@ function background_apps_JS(){
             img = document.createElement('img'),
             sec = document.createElement('section');
         header.innerHTML = i.getAttribute('name');
-        img.src = 'Windows 8.1_files/images/start/app logo/' + i.getAttribute('name') + '.png';
+        img.src = 'images/start/app logo/' + i.getAttribute('name') + '.png';
         sec.appendChild(img);
         i.appendChild(sec);
         i.appendChild(header);

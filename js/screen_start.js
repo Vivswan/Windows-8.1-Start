@@ -808,7 +808,7 @@ function background_Start_JS(){
             span = document.createElement('span');
         colorsec.className = 'color';
         header.innerHTML = i.getAttribute('name');
-        img.src = 'Windows 8.1_files/images/start/app logo/' + i.getAttribute('name') + '.png';
+        img.src = 'images/start/app logo/' + i.getAttribute('name') + '.png';
         span.className = 'helpCenterImgSElement';
         i.appendChild(colorsec);
         i.appendChild(header);
@@ -921,16 +921,16 @@ function background_Start_JS(){
         a.innerHTML = '<article class="first img" style="height: 100%;width: 100%;transition: margin-top ease-out 1s;"></article>\n<article class="second img" style="height: 100%;width: 100%;"></article>';
         i.insertBefore(a, i.children[1]);
     });
-    parallel('#StartBackground main section[name="desktop"] .img').css('background', 'url("Windows 8.1_files/images/wallpapers/0.jpg") 50% 50% / cover no-repeat');
-    document.getElementById('minStartBackground').src = 'Windows 8.1_files/images/wallpapers/' + indexBackgroundWallpaper + '.jpg';
+    parallel('#StartBackground main section[name="desktop"] .img').css('background', 'url("images/wallpapers/0.jpg") 50% 50% / cover no-repeat');
+    document.getElementById('minStartBackground').src = 'images/wallpapers/' + indexBackgroundWallpaper + '.jpg';
     indexBackgroundWallpaper++;
     setInterval(function (){
         if (timerBackgroundWallpaper == 1){
-            document.getElementById('StartBackground').style.background = 'url("Windows 8.1_files/images/wallpapers/' + indexBackgroundWallpaper + '.jpg") 50% 50% / cover no-repeat';
+            document.getElementById('StartBackground').style.background = 'url("images/wallpapers/' + indexBackgroundWallpaper + '.jpg") 50% 50% / cover no-repeat';
         }
-        document.getElementById('minStartBackground').src = 'Windows 8.1_files/images/wallpapers/' + indexBackgroundWallpaper + '.jpg';
+        document.getElementById('minStartBackground').src = 'images/wallpapers/' + indexBackgroundWallpaper + '.jpg';
         parallel('#StartBackground main section[name="desktop"] article.backgroundArticleDesktop').forEach(function (i){
-            i.children[1].style.background = 'url("Windows 8.1_files/images/wallpapers/' + indexBackgroundWallpaper + '.jpg") 50% 50% / cover no-repeat';
+            i.children[1].style.background = 'url("images/wallpapers/' + indexBackgroundWallpaper + '.jpg") 50% 50% / cover no-repeat';
             i.children[0].style.marginTop = -i.clientHeight + 'px';
         });
         setTimeout(function (){
