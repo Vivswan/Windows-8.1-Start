@@ -3,25 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0f0c8d5f-8429-4813-a482-4fd327f1b67a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Windows 8.1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Windows 8.1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/menu_left.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/menu_left.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Window</find>
-      <find>!=</find>
-      <find>Windows</find>
-      <find>Windows 8.1_files/</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>!==</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,7 +68,7 @@
       <workItem from="1555844982917" duration="117000" />
       <workItem from="1555845553088" duration="3000" />
       <workItem from="1555998147838" duration="879000" />
-      <workItem from="1581049126586" duration="897000" />
+      <workItem from="1581049126586" duration="1248000" />
     </task>
     <task id="LOCAL-00001" summary="moved to root">
       <created>1555845056646</created>
@@ -97,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555845088197</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="removed Message for Thank you">
+      <created>1581050093978</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581050093978</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,12 +101,25 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="moved to root" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved to root" />
+    <MESSAGE value="removed Message for Thank you" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed Message for Thank you" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581049477687">
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1581050091947">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581049477687" />
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581050091947" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1581050096383">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581050096383" />
+    <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1581050317023">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="118" width="607" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581050317023" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581050310859">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581050310859" />
   </component>
 </project>

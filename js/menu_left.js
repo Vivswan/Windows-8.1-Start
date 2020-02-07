@@ -67,10 +67,10 @@ function leftStartJS(){
     tickElementOfAccentColor.innerHTML = '<section class="left"></section><section class="right"></section>';
     closeleftStart();
     leftTopStartOppener.addEvent(['mouseenter', 'mouseover'], function (){
-        if (WindowedMouse == 0){
-            if (timerToIntantOpenLeftStart == 1){
+        if (WindowedMouse === 0){
+            if (timerToIntantOpenLeftStart === 1){
                 launch2leftStart()
-            } else if (timerToOpenLeftStart == -1){
+            } else if (timerToOpenLeftStart === -1){
                 timerToOpenLeftStart = setTimeout(function (){
                     timerToOpenLeftStart = -1;
                     launch1leftStart()
@@ -83,11 +83,11 @@ function leftStartJS(){
         }
     });
     leftBottemStartOppener.addEvent(['mouseenter', 'mouseover'], function (){
-        if (WindowedMouse == 0){
-            if (timerToIntantOpenLeftStart == 2){
+        if (WindowedMouse === 0){
+            if (timerToIntantOpenLeftStart === 2){
                 launch2leftStart()
             }
-            if (timerToOpenLeftStart == -1){
+            if (timerToOpenLeftStart === -1){
                 timerToOpenLeftStart = setTimeout(function (){
                     timerToOpenLeftStart = -1;
                     launch1leftStart()
@@ -108,7 +108,7 @@ function leftStartJS(){
         timerToOpenLeftStart = -1;
     });
     leftStartLI.addEvent(['mouseenter', 'mouseover'], function (){
-        if (isOpenLeftStart == 0){
+        if (isOpenLeftStart === 0){
             launch2leftStart()
         }
     });
@@ -247,10 +247,10 @@ function leftStartJS(){
         if (Number(this.getAttribute('number')) < 19){
             document.getElementById('StartBackground').style.background = 'url("images/start_screen/' + this.getAttribute('number') + '.jpg") 50% 50% / cover no-repeat';
             document.getElementById('StartBackground').style.backgroundSize = 'cover';
-        } else if (Number(this.getAttribute('number')) == 19){
+        } else if (Number(this.getAttribute('number')) === 19){
             document.getElementById('StartBackground').style.background = null;
-        } else if (Number(this.getAttribute('number')) == 20){
-            document.getElementById('StartBackground').style.background = 'url("images/wallpapers/' + (indexBackgroundWallpaper == 0 ? 13 : (indexBackgroundWallpaper - 1)) + '.jpg") 50% 50% / cover no-repeat';
+        } else if (Number(this.getAttribute('number')) === 20){
+            document.getElementById('StartBackground').style.background = 'url("images/wallpapers/' + (indexBackgroundWallpaper === 0 ? 13 : (indexBackgroundWallpaper - 1)) + '.jpg") 50% 50% / cover no-repeat';
             timerBackgroundWallpaper = 1;
         }
         this.appendChild(tickElementOfBackgroundImages);
@@ -304,21 +304,21 @@ function leftStartJS(){
         this.click()
     });
     window.addEventListener('mouseup', function (){
-        if (mouseOverOnColor == 1){
+        if (mouseOverOnColor === 1){
             document.getElementById('PersonalizebackgroundColor2').children[currentBackgroundColor].click();
         }
-        if (mouseOverOnColor == 2){
+        if (mouseOverOnColor === 2){
             document.getElementById('PersonalizeAccentColor2').children[currentAccentColor].click();
         }
         mouseOverOnColor = 0;
     });
     parallel('.backgroundColor2 li').addEvent('mouseover', function (){
-        if (mouseOverOnColor == 1){
+        if (mouseOverOnColor === 1){
             this.click()
         }
     });
     parallel('.AccentColor2 li').addEvent('mouseover', function (){
-        if (mouseOverOnColor == 2){
+        if (mouseOverOnColor === 2){
             this.click()
         }
     });
@@ -446,10 +446,10 @@ function leftStartJS(){
 }
 
 function searchSubmit(){
-    if (document.getElementById('leftmenuSearchTop').value == document.getElementById('UserNameOfCurrentUser').innerHTML){
+    if (document.getElementById('leftmenuSearchTop').value === document.getElementById('UserNameOfCurrentUser').innerHTML){
         document.getElementById('ActivatedWindows').parentElement.removeChild(document.getElementById('ActivatedWindows'));
         document.getElementById('leftmenuSearchTop').value = 'Windows Activated';
-    } else if (document.getElementById('leftmenuSearchTop').value != ''){
-        window.location.assign('http://www.google.com/search?q=' + encodeURIComponent(document.getElementById('leftmenuSearchTop').value));
+    } else if (document.getElementById('leftmenuSearchTop').value !== ''){
+        window.open('http://www.google.com/search?q=' + encodeURIComponent(document.getElementById('leftmenuSearchTop').value), '_blank');
     }
 }
