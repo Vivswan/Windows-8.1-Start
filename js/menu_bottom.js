@@ -6,26 +6,26 @@ function bottomMenuJS(){
         return false;
     });
     parallel('bottomMenu > ul > li').addEvent('mousedown', function (){
-        if (this.getElementsByTagName('img')[0].src.indexOf('_h.png') == -1){
+        if (this.getElementsByTagName('img')[0].src.indexOf('_h.png') === -1){
             isEntered = this;
             this.getElementsByTagName('img')[0].src = this.getElementsByTagName('img')[0].src.replace('.png', '_h.png');
         }
     });
     parallel('bottomMenu > ul > li').addEvent('mouseenter', function (){
-        if (isEntered == this){
+        if (isEntered === this){
             this.getElementsByTagName('img')[0].src = this.getElementsByTagName('img')[0].src.replace('.png', '_h.png');
         }
     });
     parallel('bottomMenu > ul > li').addEvent('mouseleave', function (){
-        if (this.getElementsByTagName('img')[0].src.indexOf('_h.png') != -1){
+        if (this.getElementsByTagName('img')[0].src.indexOf('_h.png') !== -1){
             this.getElementsByTagName('img')[0].src = this.getElementsByTagName('img')[0].src.replace('_h.png', '.png');
         }
     });
     parallel('bottomMenu > ul > li').addEvent('mouseup', function (){
-        if (this.getElementsByTagName('img')[0].src.indexOf('_h.png') != -1){
+        if (this.getElementsByTagName('img')[0].src.indexOf('_h.png') !== -1){
             this.getElementsByTagName('img')[0].src = this.getElementsByTagName('img')[0].src.replace('_h.png', '.png');
         }
-        if (isEntered == this){
+        if (isEntered === this){
             this.click();
         }
     });

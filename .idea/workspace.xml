@@ -105,14 +105,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="removed Message for Thank you" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1581050091947">
+    <state x="552" y="179" key="#Inspections" timestamp="1581050592438">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581050091947" />
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1581050096383">
+    <state x="552" y="179" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1581050592438" />
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1581050404464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581050096383" />
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581050404464" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1581050407792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581050407792" />
     <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1581050317023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

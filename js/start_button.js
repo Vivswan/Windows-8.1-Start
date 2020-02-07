@@ -7,7 +7,7 @@ function bottomleftStartJS(){
         display: 'none'
     });
     parallel('bottomleftStartOppener').addEvent('mouseenter', function (){
-        if (WindowedMouse == 0){
+        if (WindowedMouse === 0){
             var a = bottomleftStart.css({
                 display: null
             });

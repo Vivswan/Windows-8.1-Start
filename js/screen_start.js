@@ -12,6 +12,9 @@ var StartRigthClickSelected = new Set(),
     secStartOfStart = [],
     indexBackgroundWallpaper = 0,
     timerBackgroundWallpaper = 0;
+/**
+ * @return {number}
+ */
 function SortOfSElement(i, j){
     var ipos = i.getAttribute('startPosition').split(':'),
         jpos = j.getAttribute('startPosition').split(':');
@@ -35,7 +38,7 @@ function SortOfSElement(i, j){
 }
 function SElementPinToStart(id){
     var a = parallel('#StartBackground main section[selementid="' + id + '" ]');
-    if (a.getAttribute('inStart') == '0'){
+    if (a.getAttribute('inStart') === '0'){
         CurrentSElementPosition[1]++;
         a.css({
             'opacity': null,
@@ -121,9 +124,9 @@ function startSettingStartSElement(){
         T75: 65,
         L75: 65,
         thisShape: function (s, sc, This){
-            if (this.sec == -1){
+            if (this.sec === -1){
                 this.sec = sc;
-            } else if (sc != this.sec){
+            } else if (sc !== this.sec){
                 this.sec = sc;
                 CurrentSElementPosition[0]++;
                 CurrentSElementPosition[1] = 0;
@@ -134,61 +137,61 @@ function startSettingStartSElement(){
                 colOfStart[colOfStart.length] = this.left;
                 secStartOfStart[secStartOfStart.length] = this.left - 70;
             }
-            if (this.count == 2){
+            if (this.count === 2){
                 this.count = 0;
                 this.top += this.Tadd;
             }
-            if (Math.floor(this.count) != this.count && s == 'medium'){
+            if (Math.floor(this.count) !== this.count && s === 'medium'){
                 this.count = Math.floor(this.count) + 1;
-                if (this.count == 2){
+                if (this.count === 2){
                     this.count = 0;
                     this.top += this.Tadd;
                 }
             }
-            if ((s == 'large' || s == 'wide') && this.count != 0){
+            if ((s === 'large' || s === 'wide') && this.count !== 0){
                 this.top += this.Tadd;
                 this.count = 0;
             }
-            if (((this.top + 250 > window.innerHeight - 80 && s == 'large') || this.top + 120 > window.innerHeight - 80) && this.count == 0){
+            if (((this.top + 250 > window.innerHeight - 80 && s === 'large') || this.top + 120 > window.innerHeight - 80) && this.count === 0){
                 this.top = 150;
                 this.left += this.Ladd;
                 this.count = 0;
                 this.maxColWidth = 0;
                 colOfStart[colOfStart.length] = this.left;
             }
-            if (this.count == 0){
+            if (this.count === 0){
                 this.thisTop = this.top + this.T0;
                 this.thisLeft = this.left + this.L0;
-            } else if (this.count == 1){
+            } else if (this.count === 1){
                 this.thisTop = this.top + this.T1;
                 this.thisLeft = this.left + this.L1;
-            } else if (this.count == .25){
+            } else if (this.count === .25){
                 this.thisTop = this.top + this.T25;
                 this.thisLeft = this.left + this.L25;
-            } else if (this.count == .5){
+            } else if (this.count === .5){
                 this.thisTop = this.top + this.T50;
                 this.thisLeft = this.left + this.L50;
-            } else if (this.count == .75){
+            } else if (this.count === .75){
                 this.thisTop = this.top + this.T75;
                 this.thisLeft = this.left + this.L75;
-            } else if (this.count == 1.25){
+            } else if (this.count === 1.25){
                 this.thisTop = this.top + this.T1 + this.T25;
                 this.thisLeft = this.left + this.L1 + this.L25;
-            } else if (this.count == 1.5){
+            } else if (this.count === 1.5){
                 this.thisTop = this.top + this.T1 + this.T50;
                 this.thisLeft = this.left + this.L1 + this.L50;
-            } else if (this.count == 1.75){
+            } else if (this.count === 1.75){
                 this.thisTop = this.top + this.T1 + this.T75;
                 this.thisLeft = this.left + this.L1 + this.L75;
             }
             This.setAttribute('rPos', this.count);
-            if (s == 'small'){
+            if (s === 'small'){
                 this.count += .25;
-            } else if (s == 'medium'){
+            } else if (s === 'medium'){
                 this.count++;
-            } else if (s == 'wide'){
+            } else if (s === 'wide'){
                 this.top += this.Tadd;
-            } else if (s == 'large'){
+            } else if (s === 'large'){
                 this.top += 2 * this.Tadd;
             }
             CurrentSElementPosition[1]++;
@@ -209,7 +212,7 @@ function startSettingStartSElement(){
     parallel('#StartBackground main section[inStart="1"]').toArray().sort(SortOfSElement).forEach(function (i){
         pos.thisShape(i.getAttribute('size').toLowerCase(), Number(i.getAttribute('startPosition').split(':')[0]), i);
         i.setAttribute('startPosition', CurrentSElementPosition[0] + ':' + CurrentSElementPosition[1]);
-        if (i.className.indexOf('focus') != -1){
+        if (i.className.indexOf('focus') !== -1){
             i.setAttribute('predictedTop', pos.thisTop + 'px');
             i.setAttribute('predictedLeft', pos.thisLeft + 'px');
         } else {
@@ -244,9 +247,9 @@ function innerElements(This, size){
                     )
                     ||
                     (
-                        size == 'wide'
+                        size === 'wide'
                         &&
-                        i.getAttribute('size') == 'large'
+                        i.getAttribute('size') === 'large'
                         &&
                         i.offsetLeft > This.offsetLeft
                         &&
@@ -257,18 +260,18 @@ function innerElements(This, size){
                         i.offsetLeft + i.clientWidth < This.offsetLeft + This.clientWidth
                         &&
                         (
-                            i.offsetTop == This.offsetTop + 1
+                            i.offsetTop === This.offsetTop + 1
                             ||
-                            i.offsetTop + i.clientHeight == This.offsetTop + This.clientHeight - 1
+                            i.offsetTop + i.clientHeight === This.offsetTop + This.clientHeight - 1
                         )
                     )
                     ||
                     (
-                        size == 'medium'
+                        size === 'medium'
                         &&
                         (
                             (
-                                i.getAttribute('size') == 'wide'
+                                i.getAttribute('size') === 'wide'
                                 &&
                                 i.offsetTop > This.offsetTop
                                 &&
@@ -279,14 +282,14 @@ function innerElements(This, size){
                                 i.offsetTop + i.clientHeight < This.offsetTop + This.clientHeight
                                 &&
                                 (
-                                    i.offsetLeft == This.offsetLeft + 1
+                                    i.offsetLeft === This.offsetLeft + 1
                                     ||
-                                    i.offsetLeft + i.clientWidth == This.offsetLeft + This.clientWidth - 1
+                                    i.offsetLeft + i.clientWidth === This.offsetLeft + This.clientWidth - 1
                                 )
                             )
                             ||
                             (
-                                i.getAttribute('size') == 'large'
+                                i.getAttribute('size') === 'large'
                                 &&
                                 This.offsetLeft + 1 >= i.offsetLeft
                                 &&
@@ -308,11 +311,11 @@ function innerElements(This, size){
                     )
                     ||
                     (
-                        size == 'small'
+                        size === 'small'
                         &&
                         (
                             (
-                                i.getAttribute('size') == 'medium'
+                                i.getAttribute('size') === 'medium'
                                 &&
                                 This.offsetLeft + 1 >= i.offsetLeft
                                 &&
@@ -332,7 +335,7 @@ function innerElements(This, size){
                             )
                             ||
                             (
-                                i.getAttribute('size') == 'wide'
+                                i.getAttribute('size') === 'wide'
                                 &&
                                 This.offsetLeft + 1 >= i.offsetLeft
                                 &&
@@ -352,7 +355,7 @@ function innerElements(This, size){
                             )
                             ||
                             (
-                                i.getAttribute('size') == 'large'
+                                i.getAttribute('size') === 'large'
                                 &&
                                 This.offsetLeft + 1 >= i.offsetLeft
                                 &&
@@ -379,7 +382,7 @@ function innerElements(This, size){
     }).toArray();
 }
 function startSElementOnMove(This){
-    if ((This.getAttribute('size') != 'large' && This.offsetTop + This.clientHeight / 2 > 150 && This.offsetTop + This.clientHeight / 2 < StartHeight) || (This.getAttribute('size') == 'large' && This.offsetTop + This.clientHeight / 4 > 150 && This.offsetTop + 3 * This.clientHeight / 4 < StartHeight) && This.getAttribute('predictedTop') && This.getAttribute('predictedLeft')){
+    if ((This.getAttribute('size') !== 'large' && This.offsetTop + This.clientHeight / 2 > 150 && This.offsetTop + This.clientHeight / 2 < StartHeight) || (This.getAttribute('size') === 'large' && This.offsetTop + This.clientHeight / 4 > 150 && This.offsetTop + 3 * This.clientHeight / 4 < StartHeight) && This.getAttribute('predictedTop') && This.getAttribute('predictedLeft')){
         var i;
         if (This.offsetLeft + This.clientWidth / 2 > 25 && This.offsetLeft + This.clientWidth / 2 < 75){
             document.getElementById('divForNewSection').style.left = '35px';
@@ -434,68 +437,68 @@ function startSElementOnMove(This){
                 T75: 65,
                 L75: 65,
                 thisShape: function (s, sc, ele){
-                    if (this.sec == -1){
+                    if (this.sec === -1){
                         this.sec = sc;
-                    } else if (sc != this.sec){
+                    } else if (sc !== this.sec){
                         this.sec = sc;
                         this.count = 0;
                         this.top = 150;
                         this.left = this.maxColWidth + this.SecLadd;
                         this.maxColWidth = 0;
                     }
-                    if (this.count == 2){
+                    if (this.count === 2){
                         this.count = 0;
                         this.top += this.Tadd;
                     }
-                    if (Math.floor(this.count) != this.count && s == 'medium'){
+                    if (Math.floor(this.count) !== this.count && s === 'medium'){
                         this.count = Math.floor(this.count) + 1;
-                        if (this.count == 2){
+                        if (this.count === 2){
                             this.count = 0;
                             this.top += this.Tadd;
                         }
                     }
-                    if ((s == 'large' || s == 'wide') && this.count != 0){
+                    if ((s === 'large' || s === 'wide') && this.count !== 0){
                         this.top += this.Tadd;
                         this.count = 0;
                     }
-                    if (((this.top + 250 > window.innerHeight - 80 && s == 'large') || this.top + 120 > window.innerHeight - 80) && this.count == 0){
+                    if (((this.top + 250 > window.innerHeight - 80 && s === 'large') || this.top + 120 > window.innerHeight - 80) && this.count === 0){
                         this.top = 150;
                         this.left += this.Ladd;
                         this.count = 0;
                         this.maxColWidth = 0;
                     }
-                    if (this.count == 0){
+                    if (this.count === 0){
                         this.thisTop = this.top + this.T0;
                         this.thisLeft = this.left + this.L0;
-                    } else if (this.count == 1){
+                    } else if (this.count === 1){
                         this.thisTop = this.top + this.T1;
                         this.thisLeft = this.left + this.L1;
-                    } else if (this.count == .25){
+                    } else if (this.count === .25){
                         this.thisTop = this.top + this.T25;
                         this.thisLeft = this.left + this.L25;
-                    } else if (this.count == .5){
+                    } else if (this.count === .5){
                         this.thisTop = this.top + this.T50;
                         this.thisLeft = this.left + this.L50;
-                    } else if (this.count == .75){
+                    } else if (this.count === .75){
                         this.thisTop = this.top + this.T75;
                         this.thisLeft = this.left + this.L75;
-                    } else if (this.count == 1.25){
+                    } else if (this.count === 1.25){
                         this.thisTop = this.top + this.T1 + this.T25;
                         this.thisLeft = this.left + this.L1 + this.L25;
-                    } else if (this.count == 1.5){
+                    } else if (this.count === 1.5){
                         this.thisTop = this.top + this.T1 + this.T50;
                         this.thisLeft = this.left + this.L1 + this.L50;
-                    } else if (this.count == 1.75){
+                    } else if (this.count === 1.75){
                         this.thisTop = this.top + this.T1 + this.T75;
                         this.thisLeft = this.left + this.L1 + this.L75;
                     }
-                    if (s == 'small'){
+                    if (s === 'small'){
                         this.count += .25;
-                    } else if (s == 'medium'){
+                    } else if (s === 'medium'){
                         this.count++;
-                    } else if (s == 'wide'){
+                    } else if (s === 'wide'){
                         this.top += this.Tadd;
-                    } else if (s == 'large'){
+                    } else if (s === 'large'){
                         this.top += 2 * this.Tadd;
                     }
                     if (this.maxColWidth < this.thisLeft + ele.clientWidth){
@@ -504,7 +507,7 @@ function startSElementOnMove(This){
                 }
             },
             a, p, inner, preinner;
-        if (This.getAttribute('size') == 'small'){
+        if (This.getAttribute('size') === 'small'){
             var colS = 0;
             for (i = 0; i < colOfStart.length; i++){
                 if (This.offsetLeft + This.clientWidth / 2 > colOfStart[i] && This.offsetLeft + This.clientWidth / 2 < colOfStart[i] + 260){
@@ -528,7 +531,7 @@ function startSElementOnMove(This){
                 clientHeight: 122,
                 clientWidth: 122
             }, 'medium');
-            if (!((b.length == 0 && This.getAttribute('predictedTop') == (row - 1) * 130 + 150 + 'px' && This.getAttribute('predictedLeft') == colOfStart[col - 1] + (This.offsetLeft + 60 - colOfStart[col - 1] > 125 ? 130 : 0) + 'px') || (b.length != 0 && This.getAttribute('predictedTop') == (row - 1) * 130 + 150 + (rowS - 1) * 65 + 'px' && This.getAttribute('predictedLeft') == colOfStart[col - 1] + (colS - 1) * 65 + 'px')) && col != 0 && colS != 0 && This.getAttribute('predictedTop')){
+            if (!((b.length === 0 && This.getAttribute('predictedTop') === (row - 1) * 130 + 150 + 'px' && This.getAttribute('predictedLeft') === colOfStart[col - 1] + (This.offsetLeft + 60 - colOfStart[col - 1] > 125 ? 130 : 0) + 'px') || (b.length !== 0 && This.getAttribute('predictedTop') === (row - 1) * 130 + 150 + (rowS - 1) * 65 + 'px' && This.getAttribute('predictedLeft') === colOfStart[col - 1] + (colS - 1) * 65 + 'px')) && col !== 0 && colS !== 0 && This.getAttribute('predictedTop')){
                 i = 0;
                 while (true){
                     preinner = innerElements({
@@ -554,7 +557,7 @@ function startSElementOnMove(This){
                 preinner.sort(SortOfSElement);
                 inner.sort(SortOfSElement);
                 if (preinner.length > 0){
-                    if (i > 0 || (inner.length == 0 && i == 0)){
+                    if (i > 0 || (inner.length === 0 && i === 0)){
                         This.setAttribute('startPosition', preinner[preinner.length - 1].getAttribute('startPosition') + '.5');
                         startSettingStartSElement();
                         return;
@@ -564,12 +567,12 @@ function startSElementOnMove(This){
                         c = -1;
                         p = parallel('#StartBackground main section[inStart="1"]').toArray().sort(SortOfSElement);
                         p.forEach(function (i){
-                            if (c == -1){
+                            if (c === -1){
                                 pos.thisShape(i.getAttribute('size').toLowerCase(), Number(i.getAttribute('startPosition').split(':')[0]), i);
                             }
-                            if (i == This && pos.thisTop == (row - 1) * 130 + 150 + (rowS - 1) * 65 && pos.thisLeft == colOfStart[col - 1] + (colS - 1) * 65){
+                            if (i === This && pos.thisTop === (row - 1) * 130 + 150 + (rowS - 1) * 65 && pos.thisLeft === colOfStart[col - 1] + (colS - 1) * 65){
                                 c = 1;
-                            } else if (i == This){
+                            } else if (i === This){
                                 c = 0;
                             }
                         });
@@ -585,13 +588,13 @@ function startSElementOnMove(This){
                             clientHeight: 122,
                             clientWidth: 122
                         }, 'medium');
-                        if (c == 0 &&
+                        if (c === 0 &&
                             !(
-                                (inner[0].getAttribute('size') == 'medium' && b.length != 0)
+                                (inner[0].getAttribute('size') === 'medium' && b.length !== 0)
                                 ||
-                                (inner[0].getAttribute('size') == 'wide' && a.length != 0)
+                                (inner[0].getAttribute('size') === 'wide' && a.length !== 0)
                                 ||
-                                (inner[0].getAttribute('size') == 'large' && This.offsetTop + This.clientHeight / 2 < inner[0].offsetTop + inner[0].clientHeight / 2)
+                                (inner[0].getAttribute('size') === 'large' && This.offsetTop + This.clientHeight / 2 < inner[0].offsetTop + inner[0].clientHeight / 2)
                             )
                         ){
                             This.setAttribute('startPosition', inner[inner.length - 1].getAttribute('startPosition') + '.5');
@@ -602,14 +605,14 @@ function startSElementOnMove(This){
             }
             return;
         }
-        if (This.getAttribute('size') == 'medium'){
+        if (This.getAttribute('size') === 'medium'){
             for (i = 0; i < colOfStart.length; i++){
                 if (This.offsetLeft + This.clientWidth / 2 > colOfStart[i] && This.offsetLeft + This.clientWidth / 2 < colOfStart[i] + 260){
                     col = i + 1;
                 }
             }
             row = Math.floor((This.offsetTop + This.clientHeight / 2 - 150) / 130 + 1);
-            if (!(This.getAttribute('predictedTop') == (row - 1) * 130 + 150 + 'px' && This.getAttribute('predictedLeft') == colOfStart[col - 1] + (This.offsetLeft + 60 - colOfStart[col - 1] > 125 ? 130 : 0) + 'px') && col != 0){
+            if (!(This.getAttribute('predictedTop') === (row - 1) * 130 + 150 + 'px' && This.getAttribute('predictedLeft') === colOfStart[col - 1] + (This.offsetLeft + 60 - colOfStart[col - 1] > 125 ? 130 : 0) + 'px') && col !== 0){
                 i = 0;
                 while (true){
                     preinner = innerElements({
@@ -635,7 +638,7 @@ function startSElementOnMove(This){
                 preinner.sort(SortOfSElement);
                 inner.sort(SortOfSElement);
                 if (preinner.length > 0){
-                    if (i > 0 || (inner.length == 0 && i == 0)){
+                    if (i > 0 || (inner.length === 0 && i === 0)){
                         This.setAttribute('startPosition', preinner[preinner.length - 1].getAttribute('startPosition') + '.5');
                         startSettingStartSElement();
                         return;
@@ -645,12 +648,12 @@ function startSElementOnMove(This){
                         c = -1;
                         p = parallel('#StartBackground main section[inStart="1"]').toArray().sort(SortOfSElement);
                         p.forEach(function (i){
-                            if (c == -1){
+                            if (c === -1){
                                 pos.thisShape(i.getAttribute('size').toLowerCase(), Number(i.getAttribute('startPosition').split(':')[0]), i);
                             }
-                            if (i == This && pos.thisTop == (row - 1) * 130 + 150 && pos.thisLeft == colOfStart[col - 1] + (This.offsetLeft + 60 - colOfStart[col - 1] > 125 ? 130 : 0)){
+                            if (i === This && pos.thisTop === (row - 1) * 130 + 150 && pos.thisLeft === colOfStart[col - 1] + (This.offsetLeft + 60 - colOfStart[col - 1] > 125 ? 130 : 0)){
                                 c = 1;
-                            } else if (i == This){
+                            } else if (i === This){
                                 c = 0;
                             }
                         });
@@ -660,7 +663,7 @@ function startSElementOnMove(This){
                             clientHeight: 122,
                             clientWidth: 252
                         }, 'wide');
-                        if (c == 0 && !((inner[0].getAttribute('size') == 'wide' && a.length != 0) || (inner[0].getAttribute('size') == 'large' && This.offsetTop + This.clientHeight / 2 < inner[0].offsetTop + inner[0].clientHeight / 2))){
+                        if (c === 0 && !((inner[0].getAttribute('size') === 'wide' && a.length !== 0) || (inner[0].getAttribute('size') === 'large' && This.offsetTop + This.clientHeight / 2 < inner[0].offsetTop + inner[0].clientHeight / 2))){
                             This.setAttribute('startPosition', inner[inner.length - 1].getAttribute('startPosition') + '.5');
                         }
                         startSettingStartSElement();
@@ -669,14 +672,14 @@ function startSElementOnMove(This){
             }
             return;
         }
-        if (This.getAttribute('size') == 'wide'){
+        if (This.getAttribute('size') === 'wide'){
             for (i = 0; i < colOfStart.length; i++){
                 if (This.offsetLeft + This.clientWidth / 2 > colOfStart[i] && This.offsetLeft + This.clientWidth / 2 < colOfStart[i] + 260){
                     col = i + 1;
                 }
             }
             row = Math.floor((This.offsetTop + This.clientHeight / 2 - 150) / 130 + 1);
-            if (!(This.getAttribute('predictedTop') == (row - 1) * 130 + 150 + 'px' && This.getAttribute('predictedLeft') == colOfStart[col - 1] + 'px') && col != 0){
+            if (!(This.getAttribute('predictedTop') === (row - 1) * 130 + 150 + 'px' && This.getAttribute('predictedLeft') === colOfStart[col - 1] + 'px') && col !== 0){
                 i = 0;
                 while (true){
                     inner = innerElements({
@@ -704,16 +707,16 @@ function startSElementOnMove(This){
                     c = -1;
                     p = parallel('#StartBackground main section[inStart="1"]').toArray().sort(SortOfSElement);
                     p.forEach(function (i){
-                        if (c == -1){
+                        if (c === -1){
                             pos.thisShape(i.getAttribute('size').toLowerCase(), Number(i.getAttribute('startPosition').split(':')[0]), i);
                         }
-                        if (i == This && pos.thisTop == (row - 1) * 130 + 150 && pos.thisLeft == colOfStart[col - 1]){
+                        if (i === This && pos.thisTop === (row - 1) * 130 + 150 && pos.thisLeft === colOfStart[col - 1]){
                             c = 1;
-                        } else if (i == This){
+                        } else if (i === This){
                             c = 0;
                         }
                     });
-                    if (c == 0 && !(inner[0].getAttribute('size') == 'large' && This.offsetTop + This.clientHeight / 2 < inner[0].offsetTop + inner[0].clientHeight / 2)){
+                    if (c === 0 && !(inner[0].getAttribute('size') === 'large' && This.offsetTop + This.clientHeight / 2 < inner[0].offsetTop + inner[0].clientHeight / 2)){
                         This.setAttribute('startPosition', inner[inner.length - 1].getAttribute('startPosition') + '.5');
                     }
                     startSettingStartSElement();
@@ -721,14 +724,14 @@ function startSElementOnMove(This){
             }
             return;
         }
-        if (This.getAttribute('size') == 'large'){
+        if (This.getAttribute('size') === 'large'){
             for (i = 0; i < colOfStart.length; i++){
                 if (This.offsetLeft + This.clientWidth / 2 > colOfStart[i] && This.offsetLeft + This.clientWidth / 2 < colOfStart[i] + 260){
                     col = i + 1;
                 }
             }
             row = Math.floor((This.offsetTop + This.clientHeight / 4 - 150) / 130 + 1);
-            if (!(This.getAttribute('predictedTop') == (row - 1) * 130 + 150 + 'px' && This.getAttribute('predictedLeft') == colOfStart[col - 1] + 'px') && col != 0){
+            if (!(This.getAttribute('predictedTop') === (row - 1) * 130 + 150 + 'px' && This.getAttribute('predictedLeft') === colOfStart[col - 1] + 'px') && col !== 0){
                 i = 0;
                 while (true){
                     inner = innerElements({
@@ -756,16 +759,16 @@ function startSElementOnMove(This){
                     c = -1;
                     p = parallel('#StartBackground main section[inStart="1"]').toArray().sort(SortOfSElement);
                     p.forEach(function (i){
-                        if (c == -1){
+                        if (c === -1){
                             pos.thisShape(i.getAttribute('size').toLowerCase(), Number(i.getAttribute('startPosition').split(':')[0]), i);
                         }
-                        if (i == This && pos.thisTop == (row - 1) * 130 + 150 && pos.thisLeft == colOfStart[col - 1]){
+                        if (i === This && pos.thisTop === (row - 1) * 130 + 150 && pos.thisLeft === colOfStart[col - 1]){
                             c = 1;
-                        } else if (i == This){
+                        } else if (i === This){
                             c = 0;
                         }
                     });
-                    if (c == 0){
+                    if (c === 0){
                         This.setAttribute('startPosition', inner[inner.length - 1].getAttribute('startPosition') + '.5');
                     }
                     startSettingStartSElement();
@@ -779,7 +782,7 @@ function setStartScrollBar(){
         document.getElementById('StartBackgroundMain').style.left = Math.min(0, -1 * (StartWidth - window.innerWidth)) + 'px';
     }
     document.getElementById('StartBackgroundScroller').style.width = Math.min((window.innerWidth - 60) * 0.9, Math.max((window.innerWidth - 60) * 0.1, (window.innerWidth / StartWidth) * (window.innerWidth - 60))) + 'px';
-    if (document.getElementById('StartBackgroundScroller').style.width == (window.innerWidth - 60) * 0.9 + 'px'){
+    if (document.getElementById('StartBackgroundScroller').style.width === (window.innerWidth - 60) * 0.9 + 'px'){
         document.getElementById('StartScrollbar').style.display = 'none';
     } else {
         document.getElementById('StartScrollbar').style.display = null;
@@ -829,7 +832,7 @@ function background_Start_JS(){
             This = this;
             this.style.zIndex = '999';
             if (PreThis){
-                if (PreThis != This){
+                if (PreThis !== This){
                     PreThis.style.zIndex = null;
                 }
             }
@@ -867,7 +870,7 @@ function background_Start_JS(){
                 document.getElementById('StartBackgroundBottomMenuResize').removeAttribute('disable');
                 document.getElementById('StartBackgroundBottomMenuChangeColor').removeAttribute('disable');
                 document.getElementById('StartBackgroundBottomMenuCustomise').removeAttribute('disable');
-                if (StartRigthClickSelected.size == 0){
+                if (StartRigthClickSelected.size === 0){
                     document.getElementById('StartBackgroundBottomMenu').style.bottom = '-90px';
                     document.getElementById('StartBackgroundBottomMenuUnpin').setAttribute('disable', '');
                     document.getElementById('StartBackgroundBottomMenuResize').setAttribute('disable', '');
@@ -895,7 +898,7 @@ function background_Start_JS(){
             document.getElementById('StartBackgroundBottomMenuResize').removeAttribute('disable');
             document.getElementById('StartBackgroundBottomMenuChangeColor').removeAttribute('disable');
             document.getElementById('StartBackgroundBottomMenuCustomise').removeAttribute('disable');
-            if (StartRigthClickSelected.size == 0){
+            if (StartRigthClickSelected.size === 0){
                 document.getElementById('StartBackgroundBottomMenu').style.bottom = '-90px';
                 document.getElementById('StartBackgroundBottomMenuUnpin').setAttribute('disable', '');
                 document.getElementById('StartBackgroundBottomMenuResize').setAttribute('disable', '');
@@ -925,7 +928,7 @@ function background_Start_JS(){
     document.getElementById('minStartBackground').src = 'images/wallpapers/' + indexBackgroundWallpaper + '.jpg';
     indexBackgroundWallpaper++;
     setInterval(function (){
-        if (timerBackgroundWallpaper == 1){
+        if (timerBackgroundWallpaper === 1){
             document.getElementById('StartBackground').style.background = 'url("images/wallpapers/' + indexBackgroundWallpaper + '.jpg") 50% 50% / cover no-repeat';
         }
         document.getElementById('minStartBackground').src = 'images/wallpapers/' + indexBackgroundWallpaper + '.jpg';
@@ -947,7 +950,7 @@ function background_Start_JS(){
         }
     }, 3000);
     window.addEventListener('mousemove', function (e){
-        if (SElementMouseDown == 1 && (Math.abs(e.clientX - SElementMouseDownX) > 10 || Math.abs(e.clientY - SElementMouseDownY) > 10)){
+        if (SElementMouseDown === 1 && (Math.abs(e.clientX - SElementMouseDownX) > 10 || Math.abs(e.clientY - SElementMouseDownY) > 10)){
             SElementMouseDown = 2;
             This.setAttribute('predictedLeft', This.style.left);
             This.setAttribute('predictedTop', This.style.top);
@@ -957,9 +960,9 @@ function background_Start_JS(){
             This.className = This.className.replace(' right', '');
             This.className = This.className.replace(' bottom', '');
             This.className += ' focus';
-            This.parentElement.className = This.parentElement.className == '' ? 'focus' : This.parentElement.className + ' focus';
+            This.parentElement.className = This.parentElement.className === '' ? 'focus' : This.parentElement.className + ' focus';
         }
-        if (SElementMouseDown == 2){
+        if (SElementMouseDown === 2){
             This.style.left = e.clientX - SElementMouseDownXExtra - document.getElementById('StartBackgroundMain').offsetLeft + 'px';
             This.style.top = e.clientY - SElementMouseDownYExtra + 'px';
             SElementOnMove(This);
@@ -1037,7 +1040,7 @@ function background_Start_JS(){
         document.getElementById('StartBackgroundBottomMenuCustomise').setAttribute('disable', '');
     });
     document.getElementById('StartBackground').addEventListener('click', function (e){
-        if (e.target == this){
+        if (e.target === this){
             document.getElementById('StartBackgroundBottomMenuCustomise').click();
         }
     });
@@ -1045,7 +1048,7 @@ function background_Start_JS(){
         document.getElementById('StartBackgroundBottomMenuCustomise').click();
     });
     document.getElementById('StartBackground').addEventListener('contextmenu', function (e){
-        if (e.target == this){
+        if (e.target === this){
             document.getElementById('StartBackgroundBottomMenuClearSelection').click();
         }
     });
@@ -1096,7 +1099,7 @@ function background_Start_JS(){
         var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
         StartMainOffset = Math.min(0, Math.max(Math.min(-(StartWidth - window.innerWidth), 0), Math.min(0, delta * window.innerWidth * 0.4 + StartMainOffset)));
         document.getElementById('StartBackgroundMain').style.left = StartMainOffset + 'px';
-        if (This && SElementMouseDown == 2){
+        if (This && SElementMouseDown === 2){
             This.style.left = e.clientX - SElementMouseDownXExtra - document.getElementById('StartBackgroundMain').offsetLeft + 'px';
             This.style.top = e.clientY - SElementMouseDownYExtra + 'px';
             SElementOnMove(This);
@@ -1112,7 +1115,7 @@ function background_Start_JS(){
         document.getElementById('StartBackgroundMain').style.transition = 'left 0s';
     });
     window.addEventListener('mousemove', function (e){
-        if (ScrollerEnter == 1){
+        if (ScrollerEnter === 1){
             var l = Math.min(window.innerWidth - 60 - document.getElementById('StartBackgroundScroller').clientWidth, Math.max(0, (e.clientX - 30 - document.getElementById('StartBackgroundScroller').clientWidth / 2 - extraScrollEnter)));
             document.getElementById('StartBackgroundScroller').style.left = l + 'px';
             document.getElementById('StartBackgroundMain').style.left = Math.min(0, (-1 * (l / (document.getElementById('StartBackgroundScroller').parentElement.clientWidth - document.getElementById('StartBackgroundScroller').clientWidth)) * (StartWidth - window.innerWidth))) + 'px';
@@ -1182,7 +1185,7 @@ function background_Start_JS(){
             StartMainOffset = Math.min(0, Math.max(Math.min(-(StartWidth - window.innerWidth), 0), Math.min(0, window.innerWidth * 0.015 + document.getElementById('StartBackgroundMain').offsetLeft)));
             document.getElementById('StartBackgroundMain').style.left = StartMainOffset + 'px';
             setStartScrollBar();
-            if (This && SElementMouseDown == 2){
+            if (This && SElementMouseDown === 2){
                 This.style.left = e.clientX - SElementMouseDownXExtra - document.getElementById('StartBackgroundMain').offsetLeft + 'px';
                 This.style.top = e.clientY - SElementMouseDownYExtra + 'px';
                 SElementOnMove(This);
@@ -1196,7 +1199,7 @@ function background_Start_JS(){
             StartMainOffset = Math.min(0, Math.max(Math.min(-(StartWidth - window.innerWidth), 0), Math.min(0, -1 * window.innerWidth * 0.015 + document.getElementById('StartBackgroundMain').offsetLeft)));
             document.getElementById('StartBackgroundMain').style.left = StartMainOffset + 'px';
             setStartScrollBar();
-            if (This && SElementMouseDown == 2){
+            if (This && SElementMouseDown === 2){
                 This.style.left = e.clientX - SElementMouseDownXExtra - document.getElementById('StartBackgroundMain').offsetLeft + 'px';
                 This.style.top = e.clientY - SElementMouseDownYExtra + 'px';
                 SElementOnMove(This);
@@ -1252,7 +1255,7 @@ function background_Start_JS(){
     }
 }
 window.addEventListener('resize', function (){
-    if (document.getElementById('StartBackground').style.marginTop != ''){
+    if (document.getElementById('StartBackground').style.marginTop !== ''){
         document.getElementById('StartBackground').style.marginTop = '-' + document.getElementById('StartBackground').clientHeight + 'px';
     }
     setSElementPositions();

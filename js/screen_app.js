@@ -5,11 +5,11 @@ var AllSElementsRigthClickSelected = new Set(),
     AppsSearchHeaderSectionChangeText,
     AllSElementsMainOffset = 100;
 function AppsSearchHeaderSectionChange(){
-    if (AppsSearchHeaderSectionChangeText != document.getElementById('AppsSearchHeaderSectionInput').value.toLowerCase()){
+    if (AppsSearchHeaderSectionChangeText !== document.getElementById('AppsSearchHeaderSectionInput').value.toLowerCase()){
         AppsSearchHeaderSectionChangeText = document.getElementById('AppsSearchHeaderSectionInput').value.toLowerCase();
         var a = 0, b = 0;
         parallel('#AllSElements main > section').forEach(function (i){
-            if (i.getAttribute('name').toLowerCase().indexOf(document.getElementById('AppsSearchHeaderSectionInput').value.toLowerCase()) == -1){
+            if (i.getAttribute('name').toLowerCase().indexOf(document.getElementById('AppsSearchHeaderSectionInput').value.toLowerCase()) === -1){
                 i.setAttribute('disable', '');
             } else {
                 i.removeAttribute('disable');
@@ -32,7 +32,7 @@ function AppsSearchHeaderSectionChange(){
 }
 function setAppsScrollBar(){
     document.getElementById('AllSElementsScroller').style.width = Math.min((window.innerWidth - 60) * 0.9, Math.max(100, (window.innerWidth / AllSElementsWidth) * (window.innerWidth - 60))) + 'px';
-    if (document.getElementById('AllSElementsScroller').style.width == (window.innerWidth - 60) * 0.9 + 'px'){
+    if (document.getElementById('AllSElementsScroller').style.width === (window.innerWidth - 60) * 0.9 + 'px'){
         document.getElementById('AllSElementsScrollbar').style.display = 'none';
     } else {
         document.getElementById('AllSElementsScrollbar').style.display = null;
@@ -84,19 +84,19 @@ function background_apps_JS(){
             }
             var c1 = 0, c2 = 0;
             AllSElementsRigthClickSelected.forEach(function (i){
-                if (i.getAttribute('inStart') == '0'){
+                if (i.getAttribute('inStart') === '0'){
                     c1 = 1;
                 }
-                if (i.getAttribute('inStart') == '1'){
+                if (i.getAttribute('inStart') === '1'){
                     c2 = 1;
                 }
             });
-            if (c1 == 1){
+            if (c1 === 1){
                 document.getElementById('AllSElementsBottomMenuPin').removeAttribute('disable');
             } else {
                 document.getElementById('AllSElementsBottomMenuPin').setAttribute('disable', '');
             }
-            if (c2 == 1){
+            if (c2 === 1){
                 document.getElementById('AllSElementsBottomMenuUnpin').removeAttribute('disable');
             } else {
                 document.getElementById('AllSElementsBottomMenuUnpin').setAttribute('disable', '');
@@ -104,7 +104,7 @@ function background_apps_JS(){
             document.getElementById('AllSElementsBottomMenu').style.bottom = '0px';
             document.getElementById('AllSElementsBottomMenuChangeColor').removeAttribute('disable');
             document.getElementById('AllSElementsBottomMenuCustomise').removeAttribute('disable');
-            if (AllSElementsRigthClickSelected.size == 0){
+            if (AllSElementsRigthClickSelected.size === 0){
                 document.getElementById('AllSElementsBottomMenu').style.bottom = '-90px';
                 document.getElementById('AllSElementsBottomMenuPin').setAttribute('disable', '');
                 document.getElementById('AllSElementsBottomMenuUnpin').setAttribute('disable', '');
@@ -119,7 +119,7 @@ function background_apps_JS(){
             }
         });
         i.addEventListener('click', function (){
-            if (document.getElementById('AllSElementsBottomMenu').style.bottom == '0px'){
+            if (document.getElementById('AllSElementsBottomMenu').style.bottom === '0px'){
                 if (AllSElementsRigthClickSelected.has(this)){
                     AllSElementsRigthClickSelected.delete(this);
                     this.removeChild(this.getElementsByClassName("tick")[0]);
@@ -129,26 +129,26 @@ function background_apps_JS(){
                 }
                 var c1 = 0, c2 = 0;
                 AllSElementsRigthClickSelected.forEach(function (i){
-                    if (i.getAttribute('inStart') == '0'){
+                    if (i.getAttribute('inStart') === '0'){
                         c1 = 1;
                     }
-                    if (i.getAttribute('inStart') == '1'){
+                    if (i.getAttribute('inStart') === '1'){
                         c2 = 1;
                     }
                 });
-                if (c1 == 1){
+                if (c1 === 1){
                     document.getElementById('AllSElementsBottomMenuPin').removeAttribute('disable');
                 } else {
                     document.getElementById('AllSElementsBottomMenuPin').setAttribute('disable', '');
                 }
-                if (c2 == 1){
+                if (c2 === 1){
                     document.getElementById('AllSElementsBottomMenuUnpin').removeAttribute('disable');
                 } else {
                     document.getElementById('AllSElementsBottomMenuUnpin').setAttribute('disable', '');
                 }
                 document.getElementById('AllSElementsBottomMenuChangeColor').removeAttribute('disable');
                 document.getElementById('AllSElementsBottomMenuCustomise').removeAttribute('disable');
-                if (AllSElementsRigthClickSelected.size == 0){
+                if (AllSElementsRigthClickSelected.size === 0){
                     document.getElementById('AllSElementsBottomMenu').style.bottom = '-90px';
                     document.getElementById('AllSElementsBottomMenuPin').setAttribute('disable', '');
                     document.getElementById('AllSElementsBottomMenuUnpin').setAttribute('disable', '');
@@ -255,12 +255,12 @@ function background_apps_JS(){
         document.getElementById('AllSElementsBottomMenuCustomise').setAttribute('disable', '');
     });
     document.getElementById('AllSElements').addEventListener('click', function (e){
-        if (e.target == this){
+        if (e.target === this){
             document.getElementById('AllSElementsBottomMenuCustomise').click();
         }
     });
     document.getElementById('AllSElementsMain').addEventListener('click', function (e){
-        if (e.target == this){
+        if (e.target === this){
             document.getElementById('AllSElementsBottomMenuCustomise').click();
         }
     });
@@ -268,12 +268,12 @@ function background_apps_JS(){
         document.getElementById('AllSElementsBottomMenuCustomise').click();
     });
     document.getElementById('AllSElements').addEventListener('contextmenu', function (e){
-        if (e.target == this){
+        if (e.target === this){
             document.getElementById('AllSElementsBottomMenuClearSelection').click();
         }
     });
     document.getElementById('AllSElementsMain').addEventListener('contextmenu', function (e){
-        if (e.target == this){
+        if (e.target === this){
             document.getElementById('AllSElementsBottomMenuClearSelection').click();
         }
     });
@@ -289,7 +289,7 @@ function background_apps_JS(){
         isSearchfoucus = 0;
     });
     document.getElementById('AppsSearchHeaderSectionInput').addEventListener('mousemove', function (e){
-        if (WindowedMouse == 1){
+        if (WindowedMouse === 1){
             document.getElementById('AppsSearchHeaderSectionInput').style.cursor = 'default';
             e.preventDefault();
             return false;
@@ -298,7 +298,7 @@ function background_apps_JS(){
         }
     });
     document.getElementById('AppsSearchHeaderSectionInput').addEventListener('mouseenter', function (e){
-        if (WindowedMouse == 1){
+        if (WindowedMouse === 1){
             document.getElementById('AppsSearchHeaderSectionInput').style.cursor = 'default';
             e.preventDefault();
             return false;
@@ -331,7 +331,7 @@ function background_apps_JS(){
         document.getElementById('AllSElementsMain').style.transition = null;
     });
     window.addEventListener('mousemove', function (e){
-        if (ScrollerEnter == 1){
+        if (ScrollerEnter === 1){
             var l = Math.min(window.innerWidth - 60 - document.getElementById('AllSElementsScroller').clientWidth, Math.max(0, (e.clientX - 30 - document.getElementById('AllSElementsScroller').clientWidth / 2 - extraScrollEnter)));
             document.getElementById('AllSElementsScroller').style.left = l + 'px';
             document.getElementById('AllSElementsMain').style.left = (100 - (l / (document.getElementById('AllSElementsScroller').parentElement.clientWidth - document.getElementById('AllSElementsScroller').clientWidth)) * (AllSElementsWidth - window.innerWidth + 200)) + 'px';
@@ -434,7 +434,7 @@ function background_apps_JS(){
     });
 }
 window.addEventListener('resize', function (){
-    if (document.getElementById('AllSElements').style.marginTop != ''){
+    if (document.getElementById('AllSElements').style.marginTop !== ''){
         document.getElementById('AllSElements').style.marginTop = document.getElementById('AllSElements').clientHeight + 'px';
     }
     document.getElementById('AllSElementsMain').style.height = window.innerHeight - 150 - 90 + 'px';

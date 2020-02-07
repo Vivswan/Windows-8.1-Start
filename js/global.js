@@ -22,10 +22,10 @@ var StyleElememtOfChangingCss = document.createElement('style');
 
 function changeCss(){
     var a = ChangingCss;
-    while (a.indexOf('!!') != -1){
+    while (a.indexOf('!!') !== -1){
         a = a.replace('!!', BackgroundColor);
     }
-    while (a.indexOf('@@') != -1){
+    while (a.indexOf('@@') !== -1){
         a = a.replace('@@', AccentColor);
     }
     StyleElememtOfChangingCss.innerHTML = a;

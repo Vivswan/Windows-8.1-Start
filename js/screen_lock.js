@@ -20,7 +20,7 @@ function background_LockScreen_JS(){
         document.getElementById('lockScreen').style.top = '-' + window.innerHeight + 'px';
     });
     window.addEventListener('keydown', function (){
-        if (lockVisible == 1){
+        if (lockVisible === 1){
             WindowLevel = 0;
             lockVisible = 0;
             document.getElementById('lockScreen').style.top = '-' + window.innerHeight + 'px';
@@ -29,7 +29,7 @@ function background_LockScreen_JS(){
 }
 
 window.addEventListener('resize', function (){
-    if (lockVisible == 0){
+    if (lockVisible === 0){
         document.getElementById('lockScreen').style.top = '-' + window.innerHeight + 'px';
     }
 });
