@@ -2,8 +2,7 @@
 
 document.getElementById('StartBackgroundMain').innerHTML = document.getElementById('AllSElementsMain').innerHTML;
 
-var WindowedMouse = 0,
-    WindowLevel = -1;
+var WindowedMouse = 0, WindowLevel = -1;
 
 window.addEventListener('mousedown',function(){
     WindowedMouse = 1;
